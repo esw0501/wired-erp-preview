@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>정산 · 유선 ERP</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
+</head>
+<body data-idle="0" data-csrf="202c33a2ac444157b3026f1f4beb28bf">
+<div class="shell">
+  <aside class="side" id="side">
+    <a class="brand" href="/wired-erp-preview/owner/"><span class="brand-mark">유선</span><span class="brand-name">ERP</span></a>
+    <div class="side-org">
+      <strong>한빛통신(데모)</strong>
+      <span>상부 대리점</span>
+    </div>
+    <nav class="nav">
+              <a href="/wired-erp-preview/owner/hq/" class="">대시보드</a>
+              <a href="/wired-erp-preview/owner/hq/happycall/" class="">해피콜</a>
+              <a href="/wired-erp-preview/owner/hq/apps/" class="">접수 전체 관리</a>
+              <a href="/wired-erp-preview/owner/hq/codeshop/" class="">코드점 전달·개통</a>
+              <a href="/wired-erp-preview/owner/hq/settle/" class="on">정산</a>
+              <a href="/wired-erp-preview/owner/hq/branches/" class="">하부점 관리</a>
+              <a href="/wired-erp-preview/owner/hq/policy/" class="">정책 관리</a>
+              <a href="/wired-erp-preview/owner/hq/settings/" class="">설정·로그</a>
+          </nav>
+    <div class="side-foot">
+      <a href="/wired-erp-preview/owner/password/">비밀번호 변경</a>
+            <a href="/wired-erp-preview/owner/downloads/">다운로드 요청</a>    </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
+      <h1 class="top-title">정산</h1>
+      <div class="top-right">
+                <a class="bell" href="/wired-erp-preview/owner/notifications/" aria-label="알림">알림<b data-unread hidden>0</b></a>
+                <span class="who">김대표 <small>상부 대표</small></span>
+        <form method="post" action="/wired-erp-preview/owner/logout/"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><button class="btn sm ghost">로그아웃</button></form>
+      </div>
+    </header>
+    <main class="page">
+            <div class="card">
+  <div class="card-head">
+    <form class="filters" method="get"><label>정산월(개통월)<input type="month" name="period" value="2026-10"></label><button class="btn dark">보기</button></form>
+    <form method="post" action="/wired-erp-preview/owner/hq/settle/build/" class="row"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><input type="hidden" name="period" value="2026-10"><input type="hidden" name="branch_id" value="all">
+      <button class="btn primary" data-confirm="2026-10 미확정 정산을 모두 다시 계산합니다.">전체 하부점 정산 만들기·다시 계산</button></form>
+  </div>
+  <p class="muted small">수수료 = 이 달 개통 건 × 접수일 기준 정책 단가 · 상부 대납 사은품 차감 · 이전 달에 발생한 환수 차감. 확정하면 하부점이 정산서를 보고, 다시 계산할 수 없습니다.</p>
+  <div class="table-wrap"><table class="t">
+    <thead><tr><th>하부점</th><th class="num">개통</th><th>상태</th><th class="num">수수료</th><th class="num">사은품 대납</th><th class="num">환수</th><th class="num">지급액</th><th>이의</th><th></th></tr></thead>
+    <tbody>      <tr><td>강남점</td><td class="num">3건</td>
+        <td><span class="badge b-green">확정</span></td>
+        <td class="num">1,320,000원</td><td class="num neg">-1,060,000원</td><td class="num neg">0원</td>
+        <td class="num"><b>260,000원</b></td><td></td>
+        <td class="nowrap"><a class="btn sm" href="/wired-erp-preview/owner/hq/settle/1/">정산서</a>          </td></tr>
+          <tr><td>분당점</td><td class="num">2건</td>
+        <td><span class="badge b-green">확정</span></td>
+        <td class="num">750,000원</td><td class="num neg">0원</td><td class="num neg">0원</td>
+        <td class="num"><b>750,000원</b></td><td></td>
+        <td class="nowrap"><a class="btn sm" href="/wired-erp-preview/owner/hq/settle/2/">정산서</a>          </td></tr>
+          <tr><td>수원점</td><td class="num">3건</td>
+        <td><span class="badge b-green">확정</span></td>
+        <td class="num">1,160,000원</td><td class="num neg">0원</td><td class="num neg">0원</td>
+        <td class="num"><b>1,160,000원</b></td><td></td>
+        <td class="nowrap"><a class="btn sm" href="/wired-erp-preview/owner/hq/settle/3/">정산서</a>          </td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="6">합계</td><td class="num">2,170,000원</td><td colspan="2"></td></tr></tfoot>
+  </table></div>
+</div>
+
+<div class="card">
+  <div class="card-head"><h2>차감 대기 환수</h2><span class="muted small">발생일 다음 달 정산에서 차감됩니다. 환수 등록은 접수 상세에서 합니다. (기간 12개월)</span></div>
+    <div class="table-wrap"><table class="t"><thead><tr><th>접수번호</th><th>하부점</th><th>사유</th><th>발생일</th><th>메모</th></tr></thead><tbody>
+    <tr><td><a href="/wired-erp-preview/owner/apps/43/">2611-00043</a></td><td>강남점</td><td>약정 중 해지</td><td>2026.10.28</td><td>고객 약정 중 해지(데모)</td></tr>  </tbody></table></div></div>
+    </main>
+  </div>
+</div>
+<script src="/wired-erp-preview/assets/app.js"></script>
+<div style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#141414;color:#fff;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 상부 대표 · 버튼은 동작하지 않아요 <a href="/wired-erp-preview/" style="color:#ff6e2e">역할 바꾸기</a></div>
+<script>document.addEventListener('submit',function(e){e.preventDefault();alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
+</body>
+</html>

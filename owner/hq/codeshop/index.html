@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>코드점 전달·개통 · 유선 ERP</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
+</head>
+<body data-idle="0" data-csrf="202c33a2ac444157b3026f1f4beb28bf">
+<div class="shell">
+  <aside class="side" id="side">
+    <a class="brand" href="/wired-erp-preview/owner/"><span class="brand-mark">유선</span><span class="brand-name">ERP</span></a>
+    <div class="side-org">
+      <strong>한빛통신(데모)</strong>
+      <span>상부 대리점</span>
+    </div>
+    <nav class="nav">
+              <a href="/wired-erp-preview/owner/hq/" class="">대시보드</a>
+              <a href="/wired-erp-preview/owner/hq/happycall/" class="">해피콜</a>
+              <a href="/wired-erp-preview/owner/hq/apps/" class="">접수 전체 관리</a>
+              <a href="/wired-erp-preview/owner/hq/codeshop/" class="on">코드점 전달·개통</a>
+              <a href="/wired-erp-preview/owner/hq/settle/" class="">정산</a>
+              <a href="/wired-erp-preview/owner/hq/branches/" class="">하부점 관리</a>
+              <a href="/wired-erp-preview/owner/hq/policy/" class="">정책 관리</a>
+              <a href="/wired-erp-preview/owner/hq/settings/" class="">설정·로그</a>
+          </nav>
+    <div class="side-foot">
+      <a href="/wired-erp-preview/owner/password/">비밀번호 변경</a>
+            <a href="/wired-erp-preview/owner/downloads/">다운로드 요청</a>    </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
+      <h1 class="top-title">코드점 전달·개통</h1>
+      <div class="top-right">
+                <a class="bell" href="/wired-erp-preview/owner/notifications/" aria-label="알림">알림<b data-unread hidden>0</b></a>
+                <span class="who">김대표 <small>상부 대표</small></span>
+        <form method="post" action="/wired-erp-preview/owner/logout/"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><button class="btn sm ghost">로그아웃</button></form>
+      </div>
+    </header>
+    <main class="page">
+            <div class="tabs">
+  <a href="?tab=ready" class="on">전달 대기(해피콜 통과)<b>4</b></a>
+  <a href="?tab=progress" class="">개통 진행 중<b>5</b></a>
+  <a href="?tab=delayed" class="">지연 (5일 이상 변화 없음)<b>1</b></a>
+</div>
+
+
+<div class="grid g2">
+  <div class="card">
+    <div class="card-head"><h2>코드점 전달 (엑셀 내보내기)</h2></div>
+        <form method="post" action="/wired-erp-preview/owner/hq/codeshop/export/" class="stack" data-collect=".row-chk" data-need-checked=".row-chk"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf">      <div class="grid g2">
+        <label>코드점<select name="code_shop_id"><option value="1">대한코드점</option></select></label>
+        <label>사유<input name="reason" placeholder="예: 11/9 오후 전달분" maxlength="200"></label>
+      </div>
+      <button class="btn primary" >선택한 <span data-count-of=".row-chk">0</span>건 전달 엑셀 만들기</button>
+      <p class="hint">엑셀을 받는 순간 해당 건은 <b>코드점 전달</b> 상태가 됩니다. 건수·시각·작업자가 기록되고 파일 속성에 받은 사람이 표시됩니다.</p>
+    </form>
+      </div>
+  <div class="card">
+    <div class="card-head"><h2>개통 결과 업로드</h2></div>
+    <form method="post" action="/wired-erp-preview/owner/hq/codeshop/import/" enctype="multipart/form-data" class="stack"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf">      <div class="grid g2">
+        <label>코드점<select name="code_shop_id"><option value="1">대한코드점</option></select></label>
+        <label>결과 파일 (xlsx·csv)<input type="file" name="file" accept=".xlsx,.csv" required></label>
+      </div>
+      <button class="btn dark">올리고 상태 바꾸기</button>
+            <p class="hint">머리글: <b>접수번호</b>, <b>결과</b>, 설치일, 비고 · 결과 값: 개통(개통/개통완료/설치완료/완료), 확정(확정/일정확정/설치예정/예약), 취소(취소/설치불가/불가/철회)</p>
+          </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-head"><h2>해피콜 통과 — 전달 대기</h2></div>
+    <div class="table-wrap"><table class="t">
+    <thead><tr><th class="chk"><input type="checkbox" data-check-all=".row-chk" aria-label="전체 선택"></th><th>접수번호</th><th>상태</th><th>명의자</th><th>하부점</th><th>상품</th><th>희망 설치</th><th>코드점</th><th>최근 변경</th></tr></thead>
+    <tbody>      <tr><td class="chk"><input type="checkbox" class="row-chk" value="15" aria-label="선택"></td>        <td><a href="/wired-erp-preview/owner/apps/15/">2611-00015</a></td><td><span class="badge b-green">해피콜 통과</span></td>
+        <td>권*준</td><td>수원점</td><td>SK브로드밴드<span class="sub">기가라이트</span></td>
+        <td class="nowrap">11.16 저녁</td><td>-</td><td class="nowrap">11.09 16:57</td></tr>
+          <tr><td class="chk"><input type="checkbox" class="row-chk" value="17" aria-label="선택"></td>        <td><a href="/wired-erp-preview/owner/apps/17/">2611-00017</a></td><td><span class="badge b-green">해피콜 통과</span></td>
+        <td>이*윤</td><td>분당점</td><td>LG U+<span class="sub">인터넷 500M</span></td>
+        <td class="nowrap">11.18 오후</td><td>-</td><td class="nowrap">11.09 16:57</td></tr>
+          <tr><td class="chk"><input type="checkbox" class="row-chk" value="16" aria-label="선택"></td>        <td><a href="/wired-erp-preview/owner/apps/16/">2611-00016</a></td><td><span class="badge b-green">해피콜 통과</span></td>
+        <td>김*준</td><td>강남점</td><td>SK브로드밴드<span class="sub">기가인터넷 + B tv</span></td>
+        <td class="nowrap">11.17 오전</td><td>-</td><td class="nowrap">11.09 16:57</td></tr>
+          <tr><td class="chk"><input type="checkbox" class="row-chk" value="18" aria-label="선택"></td>        <td><a href="/wired-erp-preview/owner/apps/18/">2611-00018</a></td><td><span class="badge b-green">해피콜 통과</span></td>
+        <td>박*우</td><td>수원점</td><td>LG U+<span class="sub">기가 + U+tv</span></td>
+        <td class="nowrap">11.19 저녁</td><td>-</td><td class="nowrap">11.09 16:57</td></tr>
+    </tbody></table></div>
+  </div>
+    </main>
+  </div>
+</div>
+<script src="/wired-erp-preview/assets/app.js"></script>
+<div style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#141414;color:#fff;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 상부 대표 · 버튼은 동작하지 않아요 <a href="/wired-erp-preview/" style="color:#ff6e2e">역할 바꾸기</a></div>
+<script>document.addEventListener('submit',function(e){e.preventDefault();alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>접수 수정 2611-00001 · 유선 ERP</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
+</head>
+<body data-idle="0" data-csrf="2f0ccbf1ce17c4ebf8bfeb0ec5e7b181">
+<div class="shell">
+  <aside class="side" id="side">
+    <a class="brand" href="/wired-erp-preview/staff/"><span class="brand-mark">유선</span><span class="brand-name">ERP</span></a>
+    <div class="side-org">
+      <strong>한빛통신(데모)</strong>
+      <span>강남점</span>
+    </div>
+    <nav class="nav">
+              <a href="/wired-erp-preview/staff/br/" class="">대시보드</a>
+              <a href="/wired-erp-preview/staff/br/apply/" class="">접수 등록</a>
+              <a href="/wired-erp-preview/staff/br/apps/" class="on">접수 목록</a>
+          </nav>
+    <div class="side-foot">
+      <a href="/wired-erp-preview/staff/password/">비밀번호 변경</a>
+                </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
+      <h1 class="top-title">접수 수정 2611-00001</h1>
+      <div class="top-right">
+                <a class="bell" href="/wired-erp-preview/staff/notifications/" aria-label="알림">알림<b data-unread>10</b></a>
+                <span class="who">윤직원 <small>하부점 직원</small></span>
+        <form method="post" action="/wired-erp-preview/staff/logout/"><input type="hidden" name="_csrf" value="2f0ccbf1ce17c4ebf8bfeb0ec5e7b181"><button class="btn sm ghost">로그아웃</button></form>
+      </div>
+    </header>
+    <main class="page">
+            <form method="post" action="/wired-erp-preview/staff/br/apps/1/edit/" enctype="multipart/form-data" class="stack" autocomplete="off">
+  <input type="hidden" name="_csrf" value="2f0ccbf1ce17c4ebf8bfeb0ec5e7b181">
+  <section class="fieldset">
+    <div class="fs-head"><span class="no">1</span><h2>명의자</h2></div>
+    <div class="fgrid">
+      <label class="s2">구분
+        <div class="seg"><label><input type="radio" name="holder_type" value="person" checked><span>개인</span></label><label><input type="radio" name="holder_type" value="sole" ><span>개인사업자</span></label><label><input type="radio" name="holder_type" value="corp" ><span>법인</span></label></div></label>
+      <label class="s2">이름·상호<input name="holder_name" value="김민준" maxlength="100" required></label>
+      <label data-show-if="holder_type=person|sole">생년월일<input type="date" name="holder_birth" value="1970-01-01" max="2026-11-09"></label>
+      <label data-show-if="holder_type=person">주민번호 뒷자리
+        <input name="rrn_back" inputmode="numeric" maxlength="7" data-digits placeholder="입력됨 — 바꿀 때만 입력" autocomplete="off">        <span class="hint">암호화 저장 · 화면에는 가려서 표시</span></label>
+      <label data-show-if="holder_type=sole|corp">사업자번호
+        <input name="biz_no" inputmode="numeric" maxlength="12" data-digits placeholder="10자리"></label>
+      <label>휴대폰<input name="holder_phone" inputmode="tel" value="010-3752-2038" maxlength="13" data-digits placeholder="010-0000-0000"></label>
+    </div>
+  </section>
+
+  <section class="fieldset">
+    <div class="fs-head"><span class="no">2</span><h2>설치</h2><span class="hint">주소는 재가입 체크의 기준입니다. 반드시 검색해서 넣어 주세요.</span></div>
+    <div class="fgrid">
+      <label>우편번호<input name="install_zip" value="15810" readonly></label>
+      <label class="s3">도로명 주소
+        <div class="row" style="flex-wrap:nowrap"><input name="install_addr1" value="서울특별시 강남구 테헤란로 100" readonly required><button type="button" class="btn dark" data-addr-search>주소 검색</button></div></label>
+      <label class="s2">상세주소<input name="install_addr2" value="100동 1001호" maxlength="100" placeholder="101동 1203호"></label>
+      <label>건물 유형<select name="building_type"><option value="">선택</option><option selected>아파트</option><option >빌라·다세대</option><option >단독주택</option><option >오피스텔</option><option >상가·사무실</option><option >기타</option></select></label>
+      <span></span>
+      <label>희망 설치일<input type="date" name="wish_date" value="2026-11-12" min="2026-11-09"></label>
+      <label>시간대<select name="wish_slot"><option value="">선택</option><option selected>오전</option><option >오후</option><option >저녁</option><option >무관</option></select></label>
+    </div>
+  </section>
+
+  <section class="fieldset">
+    <div class="fs-head"><span class="no">3</span><h2>상품</h2><span class="hint">상부 정책표에 있는 상품만 고를 수 있습니다.</span></div>
+    <div class="fgrid">
+      <label class="s2">통신사 · 상품 (정책표)
+        <select name="product_key" id="product_key"><option value="">선택</option>
+          <optgroup label="KT">            <option value="kt500" data-limit="350000" data-fee="33000" data-months="36" selected>인터넷 베이직 · 500M</option>
+                      <option value="kt1g_tv" data-limit="500000" data-fee="52000" data-months="36" >인터넷 에센스 + TV · 1G · 지니TV 베이직</option>
+          </optgroup><optgroup label="LG U+">            <option value="lgu1g_tv" data-limit="500000" data-fee="51000" data-months="36" >기가 + U+tv · 1G · U+tv 베이직</option>
+                      <option value="lgu500" data-limit="350000" data-fee="33000" data-months="36" >인터넷 500M · 500M</option>
+          </optgroup><optgroup label="SK브로드밴드">            <option value="skb500" data-limit="320000" data-fee="31000" data-months="36" >기가라이트 · 500M</option>
+                      <option value="skb1g_tv" data-limit="470000" data-fee="49000" data-months="36" >기가인터넷 + B tv · 1G · B tv 이코노미</option>
+          </optgroup>        </select><span class="hint" id="policy-info"></span></label>
+      <label>TV 상품(변경 시)<input name="tv" value="" maxlength="40"></label>
+      <div class="stack" style="gap:8px;justify-content:flex-end">
+        <label class="inline"><input type="checkbox" name="phone_bundle" value="1" >집전화 결합</label>
+        <label class="inline"><input type="checkbox" name="mobile_bundle" value="1" >모바일 결합</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="fieldset">
+    <div class="fs-head"><span class="no">4</span><h2>납부</h2></div>
+    <div class="fgrid">
+      <label class="s2">납부자<div class="seg"><label><input type="radio" name="payer_same" value="1" checked><span>명의자와 같음</span></label><label><input type="radio" name="payer_same" value="0" ><span>다른 가족</span></label></div></label>
+      <label data-show-if="payer_same=0">납부자 이름<input name="payer_name" value="" maxlength="50"></label>
+      <label data-show-if="payer_same=0">관계<select name="payer_relation"><option value="">선택</option><option >부</option><option >모</option><option >배우자</option><option >자녀</option><option >형제자매</option><option >기타</option></select></label>
+      <label class="s2">방법<div class="seg"><label><input type="radio" name="pay_method" value="account" ><span>자동이체</span></label><label><input type="radio" name="pay_method" value="card" checked><span>카드</span></label></div></label>
+      <label>은행·카드사<input name="pay_bank" value="국민" maxlength="30"></label>
+      <label>계좌·카드번호<input name="pay_no" inputmode="numeric" maxlength="24" data-digits placeholder="입력됨(끝 6987) — 바꿀 때만"><span class="hint">암호화 저장</span></label>
+      <label class="inline s4"><input type="checkbox" name="partner_card" value="1" >제휴카드 할인 사용</label>
+    </div>
+  </section>
+
+  <section class="fieldset">
+    <div class="fs-head"><span class="no">5</span><h2>기존 이용</h2><span class="hint">편법 가입 체크용 — 고객에게 사실대로 확인하세요.</span></div>
+    <div class="fgrid">
+      <label>현재 통신사<select name="prev_carrier"><option value="">선택</option><option selected>KT</option><option >SK브로드밴드</option><option >LG U+</option><option >SKT</option><option >기타</option><option >없음</option></select></label>
+      <label>약정 만료<div class="seg"><label><input type="radio" name="prev_contract_expired" value="Y" checked><span>예</span></label><label><input type="radio" name="prev_contract_expired" value="N" ><span>아니오</span></label><label><input type="radio" name="prev_contract_expired" value="U" ><span>모름</span></label></div></label>
+      <label>직계가족 명의 인터넷 사용<div class="seg"><label><input type="radio" name="family_internet" value="Y" ><span>예</span></label><label><input type="radio" name="family_internet" value="N" checked><span>아니오</span></label><label><input type="radio" name="family_internet" value="U" ><span>모름</span></label></div></label>
+      <label>최근 해지 이력<div class="seg"><label><input type="radio" name="recent_cancel" value="Y" ><span>예</span></label><label><input type="radio" name="recent_cancel" value="N" checked><span>아니오</span></label><label><input type="radio" name="recent_cancel" value="U" ><span>모름</span></label></div></label>
+    </div>
+  </section>
+
+  <section class="fieldset">
+    <div class="fs-head"><span class="no">6</span><h2>사은품</h2><span class="hint">해피콜에서 고객에게 그대로 대조합니다.</span></div>
+    <div class="fgrid">
+      <label>약속 금액(원)<input name="gift_amount" inputmode="numeric" value="400,000"><span class="field-err" id="gift-warn" hidden></span></label>
+      <label>형태<div class="seg"><label><input type="radio" name="gift_type" value="cash" ><span>현금</span></label><label><input type="radio" name="gift_type" value="voucher" checked><span>상품권</span></label></div></label>
+      <label>지급 시점<input name="gift_timing" value="개통 후 7일 이내" maxlength="40"></label>
+      <label>지급 주체<select name="gift_payer"><option value="branch" >하부점 지급</option><option value="hq" selected>상부 대납</option></select></label>
+      <label class="s2">수령자<div class="seg"><label><input type="radio" name="gift_receiver_same" value="1" checked><span>명의자와 같음</span></label><label><input type="radio" name="gift_receiver_same" value="0" ><span>다른 가족</span></label></div></label>
+      <label class="s2" data-show-if="gift_receiver_same=0">수령자 이름<input name="gift_receiver_name" value="" maxlength="50"></label>
+    </div>
+  </section>
+
+  <section class="fieldset">
+    <div class="fs-head"><span class="no">7</span><h2>서류 · 동의</h2><span class="hint">휴대폰이면 [사진] 버튼으로 바로 촬영됩니다. 서류가 빠져도 접수는 되지만 해피콜 통과 전까지 보완해야 합니다.</span></div>
+    <div class="fgrid">
+      <label>신분증 사본<input type="file" name="doc_id_card[]" accept="image/*" capture="environment"></label>
+      <label>가입신청서(서명본)<input type="file" name="doc_app_form[]" accept="image/*" capture="environment" multiple></label>
+      <label data-show-if="holder_type=sole|corp">사업자등록증<input type="file" name="doc_biz_reg[]" accept="image/*" capture="environment"></label>
+      <label data-show-if="holder_type=corp">법인 인감 날인 서류<input type="file" name="doc_corp_seal[]" accept="image/*" capture="environment"></label>
+      <label data-show-if="payer_same=0">가족관계증명서<input type="file" name="doc_family_cert[]" accept="image/*" capture="environment"></label>
+      <label data-show-if="payer_same=0">납부자 신분증<input type="file" name="doc_id_card_other[]" accept="image/*" capture="environment"></label>
+      <label data-show-if="payer_same=0">납부 관련 서류<input type="file" name="doc_pay_doc[]" accept="image/*" capture="environment"></label>
+      <label>소명 서류(재가입 의심 시)<input type="file" name="doc_lease[]" accept="image/*" capture="environment"><span class="hint">임대차계약서 등</span></label>
+    </div>
+    <p class="hint mt">이미 올린 서류는 접수 상세에서 확인합니다. 여기서 올리면 추가됩니다.</p>    <div class="stack mt">
+      <label class="inline"><input type="checkbox" name="consent_collect" value="1" checked>고객이 개인정보 수집·이용에 동의했습니다.</label>
+      <label class="inline"><input type="checkbox" name="consent_third" value="1" checked>고객이 상부 대리점·코드점·통신사 제3자 제공에 동의했습니다.</label>
+            <p class="hint">동의 시각과 접수자는 자동으로 기록됩니다.</p>
+    </div>
+    <label class="mt">메모(상부 전달)<textarea name="memo" maxlength="1000"></textarea></label>
+  </section>
+
+  <div class="row end">
+    <a class="btn ghost" href="/wired-erp-preview/staff/apps/1/">취소</a>    <button class="btn" name="action" value="draft">임시저장</button>        <button class="btn primary" name="action" value="submit">접수</button>
+  </div>
+</form>
+    </main>
+  </div>
+</div>
+<script src="/wired-erp-preview/assets/app.js"></script>
+<div style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#141414;color:#fff;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 하부점 직원 · 버튼은 동작하지 않아요 <a href="/wired-erp-preview/" style="color:#ff6e2e">역할 바꾸기</a></div>
+<script>document.addEventListener('submit',function(e){e.preventDefault();alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
+</body>
+</html>
