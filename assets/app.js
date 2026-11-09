@@ -133,6 +133,45 @@
   // 첨부 뷰어: 우클릭·드래그 저장 막기 (완전한 차단은 아님 — 워터마크가 본 방어)
   $$('.viewer').forEach(v => { v.addEventListener('contextmenu', e => e.preventDefault()); v.addEventListener('dragstart', e => e.preventDefault()); });
 
+  // 해피콜 체크리스트: 진행 막대 · 단계 색 · 일괄 일치
+  const hcForm = $('#hcform');
+  function hcSync() {
+    if (!hcForm) return;
+    const names = [...new Set($$('input[name^="check["]', hcForm).map(i => i.name))];
+    const val = n => { const c = $$(`input[name="${CSS.escape(n)}"]`, hcForm).find(i => i.checked); return c ? c.value : ''; };
+    const yes = names.filter(n => val(n) === 'Y').length, no = names.filter(n => val(n) === 'N').length;
+    const p = $('[data-progress]');
+    if (p) {
+      $('[data-progress-text]', p).textContent = `${yes + no} / ${names.length} 확인` + (no ? ` · 불일치 ${no}` : '');
+      $('.bar i', p).style.width = (names.length ? (yes + no) / names.length * 100 : 0) + '%';
+      p.classList.toggle('bad', no > 0);
+    }
+    $$('.hc-step', hcForm).forEach(st => {
+      const ns = [...new Set($$('input[name^="check["]', st).map(i => i.name))];
+      const vs = ns.map(val);
+      st.classList.toggle('ok', ns.length > 0 && vs.every(v => v === 'Y'));
+      st.classList.toggle('ng', vs.includes('N'));
+    });
+    // 불일치가 있으면 결과를 반려 쪽으로 안내
+    const pass = $('input[name=result][value=pass]');
+    if (pass && no > 0 && pass.checked) { const rj = $('input[name=result][value=reject]'); rj.checked = true; rj.dispatchEvent(new Event('change', { bubbles: true })); }
+  }
+  if (hcForm) {
+    hcForm.addEventListener('change', hcSync);
+    $$('[data-all-yes]').forEach(b => b.addEventListener('click', () => {
+      const scope = b.dataset.allYes === 'all' ? hcForm : b.closest('.hc-step');
+      $$('input[name^="check["][value=Y]', scope).forEach(i => { i.checked = true; });
+      hcSync();
+    }));
+    hcSync();
+  }
+
+  // 승인 필요 없는 엑셀은 그 자리에서 내려받고 목록을 새로 고침
+  if (document.body.dataset.autodl) {
+    setTimeout(() => { location.href = document.body.dataset.autodl; }, 300);
+    setTimeout(() => { location.reload(); }, 2500);
+  }
+
   // 파일 선택 시 바로 올리기
   $$('form[data-autosubmit] input[type=file]').forEach(i => i.addEventListener('change', () => { if (i.files.length) i.form.submit(); }));
 })();

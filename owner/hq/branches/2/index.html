@@ -6,10 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>분당점 · 유선 ERP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Ubuntu:wght@400;500;700&family=Ubuntu+Mono&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
 </head>
-<body data-idle="0" data-csrf="202c33a2ac444157b3026f1f4beb28bf">
+<body data-idle="0" data-csrf="0e8c8570dc9387893c67c06d71677d6d">
 <div class="shell">
   <aside class="side" id="side">
     <a class="brand" href="/wired-erp-preview/owner/"><span class="brand-mark">유선</span><span class="brand-name">ERP</span></a>
@@ -38,7 +41,7 @@
       <div class="top-right">
                 <a class="bell" href="/wired-erp-preview/owner/notifications/" aria-label="알림">알림<b data-unread hidden>0</b></a>
                 <span class="who">김대표 <small>상부 대표</small></span>
-        <form method="post" action="/wired-erp-preview/owner/logout/"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><button class="btn sm ghost">로그아웃</button></form>
+        <form method="post" action="/wired-erp-preview/owner/logout/"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><button class="btn sm ghost">로그아웃</button></form>
       </div>
     </header>
     <main class="page">
@@ -46,7 +49,7 @@
 <div class="grid g2">
   <div class="card">
     <div class="card-head"><h2>기본 정보</h2></div>
-    <form method="post" action="/wired-erp-preview/owner/hq/branches/" class="stack"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><input type="hidden" name="id" value="2">
+    <form method="post" action="/wired-erp-preview/owner/hq/branches/" class="stack"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><input type="hidden" name="id" value="2">
       <div class="grid g2">
         <label>코드<input name="code" value="B002" required></label>
         <label>이름<input name="name" value="분당점" required></label>
@@ -62,9 +65,9 @@
   <div class="card">
     <div class="card-head"><h2>허용 IP</h2><span class="muted small">매장 인터넷의 고정 IP. 이 IP 에서만 바로 로그인됩니다.</span></div>
         <ul class="noti"><li><span><b>127.0.0.1</b> <span class="muted small">매장(데모)</span></span>
-      <form method="post" action="/wired-erp-preview/owner/hq/ip/5/remove/"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><button class="btn sm danger" data-confirm="이 IP 를 지우면 그 위치에서 접속 중인 직원이 로그아웃됩니다.">삭제</button></form></li><li><span><b>::1</b> <span class="muted small">매장(데모)</span></span>
-      <form method="post" action="/wired-erp-preview/owner/hq/ip/6/remove/"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><button class="btn sm danger" data-confirm="이 IP 를 지우면 그 위치에서 접속 중인 직원이 로그아웃됩니다.">삭제</button></form></li></ul>
-    <form method="post" action="/wired-erp-preview/owner/hq/ip/" class="inline-form mt"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><input type="hidden" name="branch_id" value="2">
+      <form method="post" action="/wired-erp-preview/owner/hq/ip/5/remove/"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><button class="btn sm danger" data-confirm="이 IP 를 지우면 그 위치에서 접속 중인 직원이 로그아웃됩니다.">삭제</button></form></li><li><span><b>::1</b> <span class="muted small">매장(데모)</span></span>
+      <form method="post" action="/wired-erp-preview/owner/hq/ip/6/remove/"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><button class="btn sm danger" data-confirm="이 IP 를 지우면 그 위치에서 접속 중인 직원이 로그아웃됩니다.">삭제</button></form></li></ul>
+    <form method="post" action="/wired-erp-preview/owner/hq/ip/" class="inline-form mt"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><input type="hidden" name="branch_id" value="2">
       <label>IP 또는 범위<input name="cidr" required placeholder="211.23.45.67"></label><label>메모<input name="memo" maxlength="100" placeholder="매장 1층"></label><button class="btn">추가</button></form>
   </div>
 </div>
@@ -77,18 +80,18 @@
         <td><span class="badge b-green">사용</span> </td>
         <td class="nowrap"> <span class="sub"></span></td>
         <td class="nowrap row">
-                    <form method="post" action="/wired-erp-preview/owner/hq/users/8/reset/"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><button class="btn sm" data-confirm="임시 비밀번호를 새로 만들까요?">비밀번호 초기화</button></form>
-          <form method="post" action="/wired-erp-preview/owner/hq/users/"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><input type="hidden" name="id" value="8"><input type="hidden" name="name" value="한점장"><input type="hidden" name="phone" value="01091032247"><input type="hidden" name="role" value="br_owner"><input type="hidden" name="branch_id" value="2">
+                    <form method="post" action="/wired-erp-preview/owner/hq/users/8/reset/"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><button class="btn sm" data-confirm="임시 비밀번호를 새로 만들까요?">비밀번호 초기화</button></form>
+          <form method="post" action="/wired-erp-preview/owner/hq/users/"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><input type="hidden" name="id" value="8"><input type="hidden" name="name" value="한점장"><input type="hidden" name="phone" value="01091032247"><input type="hidden" name="role" value="br_owner"><input type="hidden" name="branch_id" value="2">
             <input type="hidden" name="status" value="disabled"><button class="btn sm danger">사용 중지</button></form></td></tr>
           <tr><td>br2.staff</td><td>서직원</td><td>하부점 직원</td><td>010-3821-6628</td>
         <td><span class="badge b-green">사용</span> </td>
         <td class="nowrap"> <span class="sub"></span></td>
         <td class="nowrap row">
-                    <form method="post" action="/wired-erp-preview/owner/hq/users/9/reset/"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><button class="btn sm" data-confirm="임시 비밀번호를 새로 만들까요?">비밀번호 초기화</button></form>
-          <form method="post" action="/wired-erp-preview/owner/hq/users/"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><input type="hidden" name="id" value="9"><input type="hidden" name="name" value="서직원"><input type="hidden" name="phone" value="01038216628"><input type="hidden" name="role" value="br_staff"><input type="hidden" name="branch_id" value="2">
+                    <form method="post" action="/wired-erp-preview/owner/hq/users/9/reset/"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><button class="btn sm" data-confirm="임시 비밀번호를 새로 만들까요?">비밀번호 초기화</button></form>
+          <form method="post" action="/wired-erp-preview/owner/hq/users/"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><input type="hidden" name="id" value="9"><input type="hidden" name="name" value="서직원"><input type="hidden" name="phone" value="01038216628"><input type="hidden" name="role" value="br_staff"><input type="hidden" name="branch_id" value="2">
             <input type="hidden" name="status" value="disabled"><button class="btn sm danger">사용 중지</button></form></td></tr>
     </tbody></table></div>
-  <form method="post" action="/wired-erp-preview/owner/hq/users/" class="inline-form mt"><input type="hidden" name="_csrf" value="202c33a2ac444157b3026f1f4beb28bf"><input type="hidden" name="branch_id" value="2">
+  <form method="post" action="/wired-erp-preview/owner/hq/users/" class="inline-form mt"><input type="hidden" name="_csrf" value="0e8c8570dc9387893c67c06d71677d6d"><input type="hidden" name="branch_id" value="2">
     <label>역할<select name="role"><option value="br_owner">하부점 대표</option><option value="br_staff">하부점 직원</option></select></label>
     <label>아이디<input name="login_id" required pattern="[A-Za-z0-9._\-]{4,40}"></label><label>이름<input name="name" required></label><label>휴대폰<input name="phone" required data-digits></label>
     <button class="btn primary">계정 만들기</button></form>
@@ -108,6 +111,6 @@
 </div>
 <script src="/wired-erp-preview/assets/app.js"></script>
 <div style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#141414;color:#fff;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 상부 대표 · 버튼은 동작하지 않아요 <a href="/wired-erp-preview/" style="color:#ff6e2e">역할 바꾸기</a></div>
-<script>document.addEventListener('submit',function(e){e.preventDefault();alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
+<script>document.addEventListener('submit',function(e){e.preventDefault();var a=e.target.getAttribute('action')||'';if(/\/start\/$/.test(a)){location.href=a.replace(/start\/$/,'');return;}alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
 </body>
 </html>
