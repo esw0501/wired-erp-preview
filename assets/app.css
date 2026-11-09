@@ -434,3 +434,13 @@ input[type=file]::file-selector-button { font: inherit; font-size: 14px; font-we
 }
 a.tel { font-weight: 700; color: var(--primary); text-decoration: underline; text-decoration-color: var(--point); text-underline-offset: 3px; }
 @media (max-width: 760px) { a.tel { display: inline-flex; align-items: center; height: 36px; padding: 0 12px; border-radius: var(--r); background: var(--point); color: var(--primary); text-decoration: none; } a.tel::before { content: '전화 '; font-weight: 500; } }
+
+/* 좁은 판(상세 화면 오른쪽 칸 등): 숫자 작게, 입력칸은 한 줄씩 */
+@container (max-width: 440px) {
+  .stat .v { font-size: 26px; }
+  .grid.fields { grid-template-columns: minmax(0, 1fr); }
+}
+details.rev { margin-top: 4px; }
+details.rev > summary { cursor: pointer; font-size: 12.5px; color: var(--red); list-style: none; display: inline-block; }
+details.rev > summary::-webkit-details-marker { display: none; }
+details.rev[open] > summary { margin-bottom: 6px; }

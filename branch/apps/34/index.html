@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
 </head>
-<body data-idle="0" data-csrf="7f6c4e5d945a3a39a5e739fcf624d87d">
+<body data-idle="0" data-csrf="55e5bdb88e08679862bc9582feae8889">
 <div class="shell">
   <aside class="side" id="side">
     <a class="brand" href="/wired-erp-preview/branch/"><span class="brand-mark">C</span><span class="brand-name">콜로세움</span></a>
@@ -29,7 +29,7 @@
     <div class="side-foot">
       <span class="side-who">정점장 · 하부점 대표</span>
       <a href="/wired-erp-preview/branch/password/">비밀번호 변경</a>
-      <a href="/wired-erp-preview/branch/br/users/">직원 계정</a>            <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="7f6c4e5d945a3a39a5e739fcf624d87d"><button class="linklike">로그아웃</button></form>
+      <a href="/wired-erp-preview/branch/br/users/">직원 계정</a>            <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="55e5bdb88e08679862bc9582feae8889"><button class="linklike">로그아웃</button></form>
     </div>
   </aside>
   <div class="main">
@@ -37,9 +37,9 @@
       <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
       <h1 class="top-title">접수 2611-00034</h1>
       <div class="top-right">
-                <a class="bell" href="/wired-erp-preview/branch/notifications/" aria-label="알림">알림<b data-unread>11</b></a>
+                <a class="bell" href="/wired-erp-preview/branch/notifications/" aria-label="알림">알림<b data-unread>12</b></a>
                 <span class="who">정점장 <small>하부점 대표</small></span>
-        <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="7f6c4e5d945a3a39a5e739fcf624d87d"><button class="btn sm ghost">로그아웃</button></form>
+        <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="55e5bdb88e08679862bc9582feae8889"><button class="btn sm ghost">로그아웃</button></form>
       </div>
     </header>
     <main class="page">
@@ -70,7 +70,7 @@
           <dt>가족 명의 인터넷</dt><dd>아니오 · 최근 해지 아니오</dd>
           <dt>사은품</dt><dd><b>450,000원</b> 현금 · 개통 후 7일 이내 · 하부점 지급</dd>
           <dt>수령자</dt><dd><span data-field="gift_receiver">명의자 동일</span></dd>
-          <dt>동의</dt><dd>수집·이용 · 제3자 제공 동의 <span class="muted small">2026.11.09 17:54</span></dd>
+          <dt>동의</dt><dd>수집·이용 · 제3자 제공 동의 <span class="muted small">2026.11.09 19:13</span></dd>
                   </dl>
       </div>
     </div>
@@ -88,7 +88,7 @@
       <div class="table-wrap"><table class="t">
         <thead><tr><th>차수</th><th>상담원</th><th>시작</th><th>결과</th><th>가족명의·해지 응답</th><th>메모</th></tr></thead>
         <tbody>
-                  <tr><td>1차</td><td>최상담</td><td class="nowrap">11.09 17:54</td>
+                  <tr><td>1차</td><td>최상담</td><td class="nowrap">11.09 19:13</td>
             <td>통과</td>
             <td>아니오 / 아니오</td>
             <td class="wrap">전 항목 확인</td></tr>
@@ -97,26 +97,41 @@
       </div>
 
   <div class="stack">
-        <div class="card">
-      <form method="post" action="/wired-erp-preview/branch/br/apps/34/gift/" class="stack"><input type="hidden" name="_csrf" value="7f6c4e5d945a3a39a5e739fcf624d87d">        <label>사은품 지급 메모<input name="memo" maxlength="100" placeholder="지급일, 방법 등"></label>
-        <button class="btn primary" data-confirm="사은품 지급 완료로 표시할까요?">사은품 지급 완료</button>
-      </form>
-    </div>
+    
+          <div class="card" id="gift">
+  <div class="card-head"><h2>고객 사은품</h2><span class="label">하부점 지급 · 현금</span></div>
+  <div class="grid g3">
+    <div class="stat"><span class="k">약속</span><span class="v">450,000</span></div>
+    <div class="stat"><span class="k">지급</span><span class="v">0</span></div>
+    <div class="stat hot "><span class="k">남은 금액</span><span class="v">450,000</span></div>
+  </div>
+  <p class="small mt muted">
+    지급 기한 2026.11.09 (약속: 개통 후 7일 이내)  </p>
+        <form method="post" action="/wired-erp-preview/branch/apps/34/gift/" enctype="multipart/form-data" class="stack mt"><input type="hidden" name="_csrf" value="55e5bdb88e08679862bc9582feae8889">      <div class="grid g3 fields">
+        <label>지급 금액<input name="amount" inputmode="numeric" value="450,000" required></label>
+        <label>지급일<input type="date" name="occurred_on" value="2026-11-09" max="2026-11-09" required></label>
+        <label>방법<select name="method"><option value="transfer" selected>계좌이체</option><option value="cash" >현금</option><option value="voucher" >상품권</option><option value="etc" >기타</option></select></label>
+      </div>
+      <label>증빙 사진 <span class="hint">이체확인증 캡처, 상품권 수령 사진 등 (필수)</span><input type="file" name="proof" accept="image/*" required></label>
+      <label>메모<input name="memo" maxlength="300" placeholder="받는 계좌, 수령인 등"></label>
+      <button class="btn primary">사은품 지급 기록</button>
+    </form>
+  </div>
     
     
     
     <div class="card">
       <div class="card-head"><h2>상태 이력</h2><span class="muted small">삭제·수정 불가</span></div>
       <ul class="timeline">
-                  <li><time>11.09 17:54</time>
+                  <li><time>11.09 19:13</time>
             <span><span class="badge b-green">설치 완료·개통</span> 개통 완료              <br><span class="who2">이관리 · 상부 관리자</span></span></li>
-                  <li><time>11.09 17:54</time>
+                  <li><time>11.09 19:13</time>
             <span><span class="badge b-black">코드점 전달</span> 대한코드점 전달              <br><span class="who2">이관리 · 상부 관리자</span></span></li>
-                  <li><time>11.09 17:54</time>
+                  <li><time>11.09 19:13</time>
             <span><span class="badge b-green">해피콜 통과</span> 전 항목 확인              <br><span class="who2">최상담 · 해피콜 상담원</span></span></li>
-                  <li><time>11.09 17:54</time>
+                  <li><time>11.09 19:13</time>
             <span><span class="badge b-orange">해피콜 중</span> 1차 통화 시작              <br><span class="who2">최상담 · 해피콜 상담원</span></span></li>
-                  <li><time>11.09 17:54</time>
+                  <li><time>11.09 19:13</time>
             <span><span class="badge b-blue">접수완료</span>               <br><span class="who2">윤직원 · 하부점 직원</span></span></li>
               </ul>
     </div>
