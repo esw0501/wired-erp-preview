@@ -1,4 +1,4 @@
-/* 유선 ERP — Stitch 스타일 (awesome-design-styles/stitch)
+/* 콜로세움(COLOSSEUM) — Stitch 스타일 (awesome-design-styles/stitch)
    바탕 #EDEADE 종이 · 기본 #072C2C 청록검정 · 포인트 #FF5F03 주황(주황 위 글자는 청록검정)
    본문 Ubuntu(+Pretendard 한글) · 숫자·제목 Oswald · 라벨 Ubuntu Mono · 반경 4/8 · 간격 8/16 */
 :root {
@@ -37,8 +37,8 @@ small, .small { font-size: 13px; }
 .shell { display: flex; min-height: 100vh; }
 .side { width: var(--side-w); flex: none; background: var(--side); color: #fff; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; }
 .brand { display: flex; align-items: center; gap: 8px; height: var(--top-h); padding: 0 var(--pad); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.1); }
-.brand-mark { background: var(--point); color: var(--primary); font-weight: 700; padding: 1px 8px; border-radius: var(--r); font-size: 15px; }
-.brand-name { font-family: var(--display); font-weight: 600; letter-spacing: .08em; font-size: 19px; }
+.brand-mark { background: var(--point); color: var(--primary); font-family: var(--display); font-weight: 600; width: 28px; height: 28px; line-height: 28px; text-align: center; border-radius: var(--r); font-size: 18px; }
+.brand-name { font-weight: 700; letter-spacing: -.01em; font-size: 18px; }
 .side-org { padding: 16px var(--pad); border-bottom: 1px solid rgba(255,255,255,.1); display: flex; flex-direction: column; gap: 2px; }
 .side-org strong { font-size: 14px; }
 .side-org span { font-family: var(--mono); font-size: 12px; color: #9DB5AF; }
@@ -330,3 +330,107 @@ body.bare { min-height: 100vh; display: flex; align-items: center; justify-conte
 /* 대시보드 좌우 나눔: 좁으면 한 줄로 */
 .split { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; }
 @media (max-width: 900px) { .split { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- 휴대폰 (760px 이하) ---------- */
+.tabbar, .side-who, .side-logout, .filter-toggle { display: none; }
+.side-logout { margin: 0; }
+.side-logout .linklike { color: #9DB5AF; font-size: 13px; }
+@media (max-width: 760px) {
+  :root { --pad: 16px; --gap: 12px; --top-h: 56px; }
+  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+  /* 위: 제목 + 알림만, 로그아웃은 전체 메뉴 안으로 */
+  .top { padding: 0 12px 0 16px; }
+  .top-logout { display: none; }
+  .side-who { display: block; font-size: 13px; color: #fff; font-weight: 700; padding-bottom: 4px; }
+  .side-logout { display: block; }
+  .side-foot a, .side-logout .linklike { font-size: 15px; padding: 6px 0; }
+  .nav a { height: 48px; line-height: 48px; font-size: 15px; }
+  .side { width: 80vw; max-width: 300px; }
+  .menu-btn { display: none; }
+  /* 아래: 하단 메뉴 */
+  .tabbar { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 15;
+            background: var(--primary); padding-bottom: env(safe-area-inset-bottom); border-top: 3px solid var(--point); }
+  .tabbar a, .tabbar button { height: 60px; display: flex; align-items: center; justify-content: center; text-align: center; color: #C9D8D4; text-decoration: none;
+            font: inherit; font-size: 13.5px; font-weight: 500; background: none; border: 0; padding: 0 4px; cursor: pointer; border-top: 3px solid transparent; margin-top: -3px; }
+  .tabbar a.on { color: #fff; font-weight: 700; border-top-color: #fff; }
+  .tabbar a.cta { color: var(--point); font-weight: 700; }
+  /* 입력: 16px 이상이어야 아이폰이 확대하지 않음, 손가락 크기 */
+  input, select, textarea { font-size: 16px; height: 44px; }
+  textarea { height: auto; }
+  .btn { height: 44px; }
+  .btn.sm { height: 36px; padding: 0 12px; }
+  .fgrid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .seg { display: flex; width: 100%; }
+  .seg label { flex: 1; }
+  .seg span { width: 100%; text-align: center; padding: 0 6px; line-height: 42px; }
+  .seg { height: 44px; }
+  .yn span { min-width: 56px; height: 36px; line-height: 34px; }
+  .hc-item { flex-wrap: wrap; }
+  .hc-step header { flex-wrap: wrap; }
+  .card { padding: 16px; }
+  .card-head { margin-bottom: 12px; }
+  .page { padding: 12px 12px 16px; }
+  .top-title { font-size: 19px; }
+  /* 검색·필터 접기 */
+  .filters { gap: 8px; }
+  .filters .filter-toggle { display: inline-flex; }
+  .filters.collapsed > :not(.filter-toggle) { display: none; }
+  .filters .filter-toggle.on { background: var(--primary); color: #fff; }
+  .filters label, .filters label.wide { width: 100%; }
+  .filters > .btn:not(.filter-toggle) { flex: 1; }
+  /* 표 → 카드 */
+  .table-wrap { margin: 0; padding: 0; overflow: visible; }
+  .t, .t tbody, .t tfoot { display: block; }
+  .t thead { display: none; }
+  .t tr { display: block; border: 1px solid var(--line2); border-radius: var(--r2); background: var(--panel2); padding: 10px 12px; margin-bottom: 8px; }
+  .t tfoot tr { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .t tfoot td { border: 0; color: #fff; }
+  .t tbody tr:hover { background: var(--panel2); }
+  .t td, .t th { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 5px 0; border: 0; white-space: normal; text-align: right; min-width: 0; }
+  .t td:first-child, .t td:last-child { padding-left: 0; padding-right: 0; }
+  .t td::before { content: attr(data-label); font-family: var(--mono); font-size: 12px; color: var(--ink3); text-align: left; flex: none; max-width: 40%; }
+  .t td:not([data-label])::before, .t td[data-label=""]::before { display: none; }
+  .t td:not([data-label]), .t td[data-label=""] { justify-content: flex-start; text-align: left; }
+  .t td:empty { display: none; }
+  .t td.num { font-size: 15px; }
+  .t td .sub { display: block; }
+  .t td > span:not(.badge):not(.tag):not(.risk):not(.sub) { text-align: right; }
+  .t td.wrap, .t td.small { min-width: 0; }
+  .t td form.row { justify-content: flex-end; }
+  /* 카드의 첫 줄(접수번호 등)은 크게 */
+  .t tbody tr > td:first-child a, .t tbody tr > td:nth-child(2) > a:only-child { font-size: 15.5px; }
+  .dl { grid-template-columns: 96px minmax(0, 1fr); }
+  .timeline li { grid-template-columns: 80px minmax(0, 1fr); }
+  .todo .a .btn { flex: 1; }
+  .todo .a { width: 100%; }
+  .inline-form label { min-width: 0; flex: 1 1 100%; }
+  .inline-form .btn { flex: 1; }
+  .docs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .t td .cv { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; min-width: 0; }
+  .t td:not([data-label]) .cv, .t td[data-label=""] .cv { align-items: flex-start; }
+  .t td .cv > .badge, .t td .cv > .tag, .t td .cv > .risk { align-self: flex-end; }
+  .card-head h2 { flex: none; }
+}
+
+/* 파일 선택 버튼 */
+input[type=file]::file-selector-button { font: inherit; font-size: 14px; font-weight: 700; height: 32px; padding: 0 12px; margin-right: 10px; border: 1px solid var(--primary); border-radius: var(--r); background: var(--primary); color: #fff; cursor: pointer; }
+@media (max-width: 760px) {
+  input[type=file] { font-size: 13px; color: var(--ink3); padding: 6px; height: auto; }
+  input[type=file]::file-selector-button { height: 40px; padding: 0 16px; }
+  /* 접수 버튼은 하단 메뉴 바로 위에 붙어 있게 */
+  .form-actions { position: sticky; bottom: calc(60px + env(safe-area-inset-bottom)); z-index: 6; background: var(--bg); padding: 10px 0; margin: 0 -12px; padding-left: 12px; padding-right: 12px; border-top: 1px solid var(--line2); }
+  .form-actions .btn { flex: 1; }
+}
+@media (max-width: 760px) {
+  /* 표 위 도구(배정·엑셀 요청)는 한 줄에 하나씩 꽉 차게 */
+  .card-head > .row { width: 100%; flex-direction: column; align-items: stretch; }
+  .card-head > .row > form, .card-head > form.row { display: flex; gap: 8px; width: 100%; }
+  .card-head > .row > form > *, .card-head > form.row > * { flex: 1; width: auto !important; }
+  .card-head > .row > form > .btn, .card-head > form.row > .btn { flex: none; }
+  .t td { padding: 4px 0; }
+  .flow .k { font-family: var(--sans); font-size: 12.5px; }
+}
+a.tel { font-weight: 700; color: var(--primary); text-decoration: underline; text-decoration-color: var(--point); text-underline-offset: 3px; }
+@media (max-width: 760px) { a.tel { display: inline-flex; align-items: center; height: 36px; padding: 0 12px; border-radius: var(--r); background: var(--point); color: var(--primary); text-decoration: none; } a.tel::before { content: '전화 '; font-weight: 500; } }

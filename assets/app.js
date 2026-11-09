@@ -1,4 +1,4 @@
-// 유선 ERP 화면 스크립트 (CSP: 인라인 스크립트 없음)
+// 콜로세움 화면 스크립트 (CSP: 인라인 스크립트 없음)
 (function () {
   'use strict';
   const $ = (s, el) => (el || document).querySelector(s);
@@ -170,6 +170,38 @@
   if (document.body.dataset.autodl) {
     setTimeout(() => { location.href = document.body.dataset.autodl; }, 300);
     setTimeout(() => { location.reload(); }, 2500);
+  }
+
+  // 휴대폰: 표를 카드로 보여 줄 때 칸 이름을 붙인다
+  $$('table.t').forEach(t => {
+    const heads = $$('thead th', t).map(th => th.textContent.trim());
+    $$('tbody tr, tfoot tr', t).forEach(tr => {
+      let i = 0;
+      Array.from(tr.children).forEach(td => {
+        const span = parseInt(td.getAttribute('colspan') || '1', 10);
+        if (heads[i] && !td.hasAttribute('data-label')) td.setAttribute('data-label', heads[i]);
+        // 이름+전화처럼 값이 여러 조각이면 한 묶음으로 (카드에서 오른쪽 정렬이 깨지지 않게)
+        const nodes = Array.from(td.childNodes).filter(n => n.nodeType === 1 || n.textContent.trim() !== '');
+        if (heads[i] && nodes.length > 1 && !td.querySelector('form')) {
+          const w = document.createElement('span'); w.className = 'cv';
+          while (td.firstChild) w.appendChild(td.firstChild);
+          td.appendChild(w);
+        }
+        i += span;
+      });
+    });
+  });
+
+  // 휴대폰: 검색·필터는 접어 두고 버튼으로 연다 (조건이 걸려 있으면 펼친 채로)
+  if (window.matchMedia('(max-width: 760px)').matches) {
+    $$('form.filters').forEach(f => {
+      const active = $$('input, select', f).some(i => i.type !== 'hidden' && (i.type === 'checkbox' ? i.checked : (i.value || '').trim() !== ''));
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'btn filter-toggle'; b.textContent = '검색·필터';
+      b.addEventListener('click', () => { f.classList.toggle('collapsed'); b.classList.toggle('on', !f.classList.contains('collapsed')); });
+      f.prepend(b);
+      if (!active) f.classList.add('collapsed'); else b.classList.add('on');
+    });
   }
 
   // 파일 선택 시 바로 올리기
