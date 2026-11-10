@@ -15,15 +15,32 @@
 <body class="bare">
 <main class="bare-box">
   <div class="bare-brand"><span class="brand-mark">C</span><span class="brand-name">콜로세움</span></div>
-    <form method="post" action="/wired-erp-preview/login/" class="stack" autocomplete="on">
-  <input type="hidden" name="_csrf" value="71840380708ccd727e47bc49846b79e4">  <label>아이디<input name="login_id" required autofocus autocomplete="username" maxlength="40"></label>
+    <div class="demo-pick">
+  <p class="demo-title"><b>데모로 둘러보기</b> <span>아이디·비밀번호 없이 역할을 고르면 바로 들어갑니다</span></p>
+      <form method="post" action="/wired-erp-preview/demo-login/"><input type="hidden" name="_csrf" value="3468edc0e4f4a0a5c456dd272d9637e4"><input type="hidden" name="login_id" value="hq.owner">
+      <button class="demo-btn"><b>상부 대표</b><span>돈 흐름·정산 확정·마감·설정</span></button></form>
+      <form method="post" action="/wired-erp-preview/demo-login/"><input type="hidden" name="_csrf" value="3468edc0e4f4a0a5c456dd272d9637e4"><input type="hidden" name="login_id" value="hq.mgr">
+      <button class="demo-btn"><b>상부 관리자</b><span>배정·코드점·송금 처리</span></button></form>
+      <form method="post" action="/wired-erp-preview/demo-login/"><input type="hidden" name="_csrf" value="3468edc0e4f4a0a5c456dd272d9637e4"><input type="hidden" name="login_id" value="agent1">
+      <button class="demo-btn"><b>해피콜 상담원</b><span>배정된 건 통화·검수</span></button></form>
+      <form method="post" action="/wired-erp-preview/demo-login/"><input type="hidden" name="_csrf" value="3468edc0e4f4a0a5c456dd272d9637e4"><input type="hidden" name="login_id" value="br1.owner">
+      <button class="demo-btn"><b>하부점 대표</b><span>접수·사은품·받을 돈</span></button></form>
+      <form method="post" action="/wired-erp-preview/demo-login/"><input type="hidden" name="_csrf" value="3468edc0e4f4a0a5c456dd272d9637e4"><input type="hidden" name="login_id" value="br1.staff">
+      <button class="demo-btn"><b>하부점 직원</b><span>접수 등록·내 실적</span></button></form>
+      <form method="post" action="/wired-erp-preview/demo-login/"><input type="hidden" name="_csrf" value="3468edc0e4f4a0a5c456dd272d9637e4"><input type="hidden" name="login_id" value="sysadmin">
+      <button class="demo-btn"><b>시스템 관리자</b><span>대리점 생성(더블트러블)</span></button></form>
+    <p class="muted small">데모 데이터(가상 고객)입니다. 다른 역할로 바꾸려면 로그아웃 후 다시 고르세요.</p>
+</div>
+<details class="demo-manual"><summary>아이디로 로그인</summary>
+<form method="post" action="/wired-erp-preview/login/" class="stack" autocomplete="on">
+  <input type="hidden" name="_csrf" value="3468edc0e4f4a0a5c456dd272d9637e4">  <label>아이디<input name="login_id" required  autocomplete="username" maxlength="40"></label>
   <label>비밀번호<input type="password" name="password" required autocomplete="current-password"></label>
   <button class="btn primary block">로그인</button>
   <p class="muted small">등록된 매장·사무실 IP 에서만 바로 접속됩니다. 밖에서는 상부가 승인한 기기에서 문자 인증 후 접속합니다.</p>
 </form>
-</main>
+</details></main>
 <script src="/wired-erp-preview/assets/app.js"></script>
 <div style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#141414;color:#fff;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 로그인 · 버튼은 동작하지 않아요 <a href="/wired-erp-preview/" style="color:#ff6e2e">역할 바꾸기</a></div>
-<script>document.addEventListener('submit',function(e){e.preventDefault();var a=e.target.getAttribute('action')||'';if(/\/start\/$/.test(a)){location.href=a.replace(/start\/$/,'');return;}alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
+<script>document.addEventListener('submit',function(e){e.preventDefault();var a=e.target.getAttribute('action')||'';if(/\/start\/$/.test(a)){location.href=a.replace(/start\/$/,'');return;}if(/demo-login\/$/.test(a)){var id=(e.target.querySelector('[name=login_id]')||{}).value;var f={'hq.owner':'owner','hq.mgr':'owner','agent1':'agent','br1.owner':'branch','br1.staff':'staff','sysadmin':'sys'}[id];if(f){location.href='/wired-erp-preview/'+f+'/';return;}}alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
 </body>
 </html>

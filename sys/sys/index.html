@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
 </head>
-<body data-idle="0" data-csrf="6befe1e24d0fe714288259589043e4f9">
+<body data-idle="0" data-csrf="64a47b53d2442b40bb4af2817b48f440">
 <div class="shell">
   <aside class="side" id="side">
     <a class="brand" href="/wired-erp-preview/sys/"><span class="brand-mark">C</span><span class="brand-name">콜로세움</span></a>
@@ -26,7 +26,7 @@
     <div class="side-foot">
       <span class="side-who">더블트러블 운영 · 시스템 관리자</span>
       <a href="/wired-erp-preview/sys/password/">비밀번호 변경</a>
-                  <form method="post" action="/wired-erp-preview/sys/logout/" class="side-logout"><input type="hidden" name="_csrf" value="6befe1e24d0fe714288259589043e4f9"><button class="linklike">로그아웃</button></form>
+                  <form method="post" action="/wired-erp-preview/sys/logout/" class="side-logout"><input type="hidden" name="_csrf" value="64a47b53d2442b40bb4af2817b48f440"><button class="linklike">로그아웃</button></form>
     </div>
   </aside>
   <div class="main">
@@ -35,7 +35,7 @@
       <h1 class="top-title">대리점(테넌트)</h1>
       <div class="top-right">
                 <span class="who">더블트러블 운영 <small>시스템 관리자</small></span>
-        <form method="post" action="/wired-erp-preview/sys/logout/" class="top-logout"><input type="hidden" name="_csrf" value="6befe1e24d0fe714288259589043e4f9"><button class="btn sm ghost">로그아웃</button></form>
+        <form method="post" action="/wired-erp-preview/sys/logout/" class="top-logout"><input type="hidden" name="_csrf" value="64a47b53d2442b40bb4af2817b48f440"><button class="btn sm ghost">로그아웃</button></form>
       </div>
     </header>
     <main class="page">
@@ -45,12 +45,12 @@
     <div class="grid g3 mb">
     <div class="stat"><span class="k">이용 중</span><span class="v">1</span></div>
     <div class="stat hot"><span class="k">월 관리비 합계</span><span class="v">99,000</span></div>
-    <div class="stat"><span class="k">이번 달 접수(전체)</span><span class="v">8</span></div>
+    <div class="stat"><span class="k">이번 달 접수(전체)</span><span class="v">9</span></div>
   </div>
   <div class="table-wrap"><table class="t">
     <thead><tr><th>코드</th><th>이름</th><th class="num">하부점</th><th class="num">계정</th><th class="num">이번 달 접수</th><th>요금제·월 관리비</th><th>상태</th><th></th></tr></thead>
-    <tbody>      <tr><td>demo</td><td>한빛통신(데모)</td><td class="num">3</td><td class="num">10</td><td class="num">8</td>
-        <td colspan="3"><form method="post" action="/wired-erp-preview/sys/sys/tenants/" class="row"><input type="hidden" name="_csrf" value="6befe1e24d0fe714288259589043e4f9"><input type="hidden" name="id" value="1">
+    <tbody>      <tr><td>demo</td><td>한빛통신(데모)</td><td class="num">3</td><td class="num">10</td><td class="num">9</td>
+        <td colspan="3"><form method="post" action="/wired-erp-preview/sys/sys/tenants/" class="row"><input type="hidden" name="_csrf" value="64a47b53d2442b40bb4af2817b48f440"><input type="hidden" name="id" value="1">
           <input name="plan" value="basic" style="width:100px"><input name="monthly_fee" value="99000" style="width:110px" inputmode="numeric">
           <select name="status" style="width:100px"><option value="active">이용</option><option value="suspended" >중지</option></select>
           <input name="memo" value="" placeholder="메모" style="width:160px"><button class="btn sm">저장</button></form></td></tr>
@@ -58,7 +58,7 @@
 </div>
 <div class="card">
   <div class="card-head"><h2>새 대리점</h2></div>
-  <form method="post" action="/wired-erp-preview/sys/sys/tenants/" class="stack"><input type="hidden" name="_csrf" value="6befe1e24d0fe714288259589043e4f9">    <div class="fgrid">
+  <form method="post" action="/wired-erp-preview/sys/sys/tenants/" class="stack"><input type="hidden" name="_csrf" value="64a47b53d2442b40bb4af2817b48f440">    <div class="fgrid">
       <label>코드(영문)<input name="code" required pattern="[a-z0-9\-]{2,30}"></label><label>대리점 이름<input name="name" required></label><label>사업자번호<input name="biz_no" data-digits></label><label>요금제<input name="plan" value="basic"></label>
       <label>설치비<input name="setup_fee" value="0" inputmode="numeric"></label><label>월 관리비<input name="monthly_fee" value="0" inputmode="numeric"></label><label class="s2">상부 사무실 IP<input name="hq_ip" placeholder="비우면 대표가 기기 승인으로 시작 불가 — 꼭 넣으세요"></label>
       <label>대표 아이디<input name="owner_login" required></label><label>대표 이름<input name="owner_name" required></label><label>대표 휴대폰<input name="owner_phone" required data-digits></label>
@@ -74,6 +74,6 @@
 </nav>
 <script src="/wired-erp-preview/assets/app.js"></script>
 <div style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#141414;color:#fff;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 시스템 관리자 · 버튼은 동작하지 않아요 <a href="/wired-erp-preview/" style="color:#ff6e2e">역할 바꾸기</a></div>
-<script>document.addEventListener('submit',function(e){e.preventDefault();var a=e.target.getAttribute('action')||'';if(/\/start\/$/.test(a)){location.href=a.replace(/start\/$/,'');return;}alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
+<script>document.addEventListener('submit',function(e){e.preventDefault();var a=e.target.getAttribute('action')||'';if(/\/start\/$/.test(a)){location.href=a.replace(/start\/$/,'');return;}if(/demo-login\/$/.test(a)){var id=(e.target.querySelector('[name=login_id]')||{}).value;var f={'hq.owner':'owner','hq.mgr':'owner','agent1':'agent','br1.owner':'branch','br1.staff':'staff','sysadmin':'sys'}[id];if(f){location.href='/wired-erp-preview/'+f+'/';return;}}alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
 </body>
 </html>
