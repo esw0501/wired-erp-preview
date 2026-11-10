@@ -169,7 +169,7 @@
   // 승인 필요 없는 엑셀은 그 자리에서 내려받고 목록을 새로 고침
   if (document.body.dataset.autodl) {
     setTimeout(() => { location.href = document.body.dataset.autodl; }, 300);
-    setTimeout(() => { location.reload(); }, 2500);
+    // 큰 파일은 오래 걸리므로 자동 새로고침을 하지 않는다(다운로드가 끊길 수 있음)
   }
 
   // 휴대폰: 표를 카드로 보여 줄 때 칸 이름을 붙인다
