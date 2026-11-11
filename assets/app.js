@@ -118,6 +118,12 @@
     });
   });
   giftCheck();
+  // 목록 위아래 이동 (열 배치)
+  $$('[data-move]').forEach(b => b.addEventListener('click', () => {
+    const li = b.closest('li'); const ul = li.parentElement;
+    if (b.dataset.move === 'up' && li.previousElementSibling) ul.insertBefore(li, li.previousElementSibling);
+    if (b.dataset.move === 'down' && li.nextElementSibling) ul.insertBefore(li.nextElementSibling, li);
+  }));
   // 복사 버튼
   $$('[data-copy]').forEach(b => b.addEventListener('click', async () => {
     const src = $(b.dataset.copy);
