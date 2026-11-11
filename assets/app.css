@@ -1,4 +1,4 @@
-/* 콜로세움(COLOSSEUM) v2 — 업무용 밝은 화면
+/* 킹넷(KINGNET) v2 — 업무용 밝은 화면
    바탕 #F3F5F8 · 판 흰색 · 기본 파랑 #1B4FD8 · 글 #1F2937 · 경고 주황 · 본문 Pretendard · 반경 6/10 */
 :root {
   --bg: #F3F5F8; --panel: #FFFFFF; --panel2: #F7F8FA; --card: var(--panel);
@@ -801,3 +801,11 @@ a.kpi, .kpi > a:hover { border-color: var(--ink3); }
   .todo.compact .a .btn { height: 36px; padding: 0 12px; }
   .todo.compact .a .btn.primary { background: var(--panel); color: var(--ink); border-color: var(--line2); }
 }
+/* 로고 */
+.brand-logo { display: block; height: 36px; width: auto; }
+.brand-logo.lg { height: 54px; margin: 0 auto; }
+.bare-brand { display: flex; justify-content: center; }
+.pub-top .brand-logo { height: 36px; }
+@media (max-width: 760px) { .brand-logo { height: 32px; } }
+.pub-top .brand { background: #fff; border-radius: 8px; padding: 4px 10px; }
+.pub-top .brand-logo { height: 30px; }

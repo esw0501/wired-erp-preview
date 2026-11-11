@@ -1,4 +1,4 @@
-// 콜로세움 화면 스크립트 (CSP: 인라인 스크립트 없음)
+// 킹넷 화면 스크립트 (CSP: 인라인 스크립트 없음)
 (function () {
   'use strict';
   const $ = (s, el) => (el || document).querySelector(s);
