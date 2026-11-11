@@ -6,140 +6,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>접수 목록 · 콜로세움</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Ubuntu:wght@400;500;700&family=Ubuntu+Mono&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
 </head>
-<body data-idle="0" data-csrf="5c7cde8fc6e458e03fc5376c57fb00a4">
-<div class="shell">
-  <aside class="side" id="side">
+<body data-idle="0" data-csrf="47c53816123727dcea9468b3ac9f5124">
+<header class="topbar">
+  <div class="topbar-in">
     <a class="brand" href="/wired-erp-preview/branch/"><span class="brand-mark">C</span><span class="brand-name">콜로세움</span></a>
-    <div class="side-org">
-      <strong>한빛통신(데모)</strong>
-      <span>강남점</span>
-    </div>
-    <nav class="nav">
-              <a href="/wired-erp-preview/branch/br/" class="">대시보드</a>
-              <a href="/wired-erp-preview/branch/br/apply/" class="">접수 등록</a>
-              <a href="/wired-erp-preview/branch/br/apps/" class="on">접수 목록</a>
-              <a href="/wired-erp-preview/branch/br/settle/" class="">정산서</a>
-          </nav>
-    <div class="side-foot">
-      <span class="side-who">정점장 · 하부점 대표</span>
-      <a href="/wired-erp-preview/branch/password/">비밀번호 변경</a>
-      <a href="/wired-erp-preview/branch/br/users/">직원 계정</a>            <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="5c7cde8fc6e458e03fc5376c57fb00a4"><button class="linklike">로그아웃</button></form>
-    </div>
-  </aside>
-  <div class="main">
-    <header class="top">
+    <nav class="topnav" aria-label="주 메뉴">
+      <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="on">접수 목록</a><a href="/wired-erp-preview/branch/br/apply/" class="">＋ 접수 등록</a><a href="/wired-erp-preview/branch/br/settle/" class="">정산서</a><a href="/wired-erp-preview/branch/br/users/" class="">직원 계정</a>    </nav>
+    <div class="top-right">
+            <a class="bell" href="/wired-erp-preview/branch/notifications/" aria-label="알림">알림<b data-unread>13</b></a>
+            <span class="who">정점장 <small>한빛통신(데모) · 강남점 · 하부점 대표</small></span>
+      <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="47c53816123727dcea9468b3ac9f5124"><button class="btn sm">로그아웃</button></form>
       <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
-      <h1 class="top-title">접수 목록</h1>
-      <div class="top-right">
-                <a class="bell" href="/wired-erp-preview/branch/notifications/" aria-label="알림">알림<b data-unread>12</b></a>
-                <span class="who">정점장 <small>하부점 대표</small></span>
-        <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="5c7cde8fc6e458e03fc5376c57fb00a4"><button class="btn sm ghost">로그아웃</button></form>
-      </div>
-    </header>
-    <main class="page">
-            <div class="tabs"><a href="/wired-erp-preview/branch/br/apps/" class="on">접수 목록</a><a href="/wired-erp-preview/branch/br/gifts/">사은품 지급</a></div><div class="card">
+    </div>
+  </div>
+</header>
+<aside class="side" id="side">
+  <div class="side-org"><strong>정점장</strong><span>한빛통신(데모) · 강남점 · 하부점 대표</span></div>
+  <nav class="nav">
+    <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="on">접수 목록</a><a href="/wired-erp-preview/branch/br/apply/" class="">＋ 접수 등록</a><a href="/wired-erp-preview/branch/br/settle/" class="">정산서</a><a href="/wired-erp-preview/branch/br/users/" class="">직원 계정</a>  </nav>
+  <div class="side-foot">
+    <a href="/wired-erp-preview/branch/password/">비밀번호 변경</a>
+        <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="47c53816123727dcea9468b3ac9f5124"><button class="linklike">로그아웃</button></form>
+  </div>
+</aside>
+<main class="page">
+  <div class="page-head">
+    <h1 class="page-title">접수 목록</h1>
+    <span class="page-org">한빛통신(데모) · 강남점</span>
+  </div>
+    <div class="tabs"><a href="/wired-erp-preview/branch/br/apps/" class="on">접수 목록</a><a href="/wired-erp-preview/branch/br/gifts/">사은품 지급</a></div><div class="chips">
+  <a href="/wired-erp-preview/branch/br/apps/" class="on">전체 <b>14</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">처리 대기 <b>0</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">접수완료 <b>2</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">해피콜 중 <b>0</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">재통화 대기 <b>1</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">반려 <b>1</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">해피콜 통과 <b>1</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">코드점 전달 <b>1</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">설치일 확정 <b>1</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">설치 완료·개통 <b>5</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">사은품 지급 완료 <b>1</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">취소 <b>0</b></a><a href="/wired-erp-preview/branch/br/apps/" class="">환수 <b>1</b></a></div>
+<div class="card">
   <form class="filters" method="get">
-    <label>상태<select name="status"><option value="">전체</option><option value="waiting" >해피콜 대기</option>
-      <option value="draft" >임시저장</option><option value="submitted" >접수완료</option><option value="in_call" >해피콜 중</option><option value="recall" >재통화 대기</option><option value="rejected" >반려</option><option value="passed" >해피콜 통과</option><option value="sent" >코드점 전달</option><option value="scheduled" >설치일 확정</option><option value="installed" >설치 완료·개통</option><option value="gift_paid" >사은품 지급 완료</option><option value="canceled" >취소</option><option value="clawback" >환수</option></select></label>
+    <input type="hidden" name="status" value="">
     <label>접수일부터<input type="date" name="from" value=""></label>
     <label>까지<input type="date" name="to" value=""></label>
     <label class="wide">검색<input name="q" value="" placeholder="이름, 휴대폰, 접수번호"></label>
     <button class="btn dark">조회</button>
-    <span class="spacer"></span><a class="btn primary" href="/wired-erp-preview/branch/br/apply/">새 접수</a>
+    <span class="spacer"></span><a class="btn primary" href="/wired-erp-preview/branch/br/apply/">＋ 새 접수</a>
   </form>
 </div>
 <div class="card">
   <div class="card-head"><h2>15건</h2><span class="muted small">해피콜이 시작된 건은 개인정보를 가려서 보여 줍니다.</span></div>
-    <div class="table-wrap"><table class="t">
-    <thead><tr><th>접수번호</th><th>상태</th><th>명의자</th><th>상품</th><th class="num">사은품</th><th>접수자</th><th>접수일</th><th>비고</th></tr></thead>
-    <tbody>      <tr><td><a href="/wired-erp-preview/branch/apps/43/">2611-00043</a></td><td><span class="badge b-red">환수</span></td>
-        <td>서*민<span class="sub">010-****-2872</span></td>
-        <td>KT<span class="sub">인터넷 베이직</span></td><td class="num">330,000원</td>
-        <td>윤직원</td><td class="nowrap">10.03 10:00</td>
-        <td>                              <span class="tag">설치 10.07</span></td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/40/">2611-00040</a></td><td><span class="badge b-green">사은품 지급 완료</span></td>
-        <td>임*은<span class="sub">010-****-3046</span></td>
-        <td>SK브로드밴드<span class="sub">기가인터넷 + B tv</span></td><td class="num">450,000원</td>
-        <td>윤직원</td><td class="nowrap">11.09 10:00</td>
-        <td>                              <span class="tag">설치 11.08</span></td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/37/">2611-00037</a></td><td><span class="badge b-green">설치 완료·개통</span></td>
-        <td>조*호<span class="sub">010-****-3057</span></td>
-        <td>KT<span class="sub">인터넷 베이직</span></td><td class="num">330,000원</td>
-        <td>윤직원</td><td class="nowrap">11.06 10:00</td>
-        <td>                              <span class="tag">설치 11.05</span></td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/34/">2611-00034</a></td><td><span class="badge b-green">설치 완료·개통</span></td>
-        <td>최*원<span class="sub">010-****-7209</span></td>
-        <td>SK브로드밴드<span class="sub">기가인터넷 + B tv</span></td><td class="num">450,000원</td>
-        <td>윤직원</td><td class="nowrap">11.03 10:00</td>
-        <td>                              <span class="tag">설치 11.02</span></td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/31/">2611-00031</a></td><td><span class="badge b-green">설치 완료·개통</span></td>
-        <td>김*준<span class="sub">010-****-4655</span></td>
-        <td>KT<span class="sub">인터넷 베이직</span></td><td class="num">400,000원</td>
-        <td>윤직원</td><td class="nowrap">10.31 10:00</td>
-        <td>                    <span class="tag warn">정책 초과</span>          <span class="tag">설치 10.15</span></td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/28/">2611-00028</a></td><td><span class="badge b-green">설치 완료·개통</span></td>
-        <td>서*민<span class="sub">010-****-1330</span></td>
-        <td>SK브로드밴드<span class="sub">기가인터넷 + B tv</span></td><td class="num">450,000원</td>
-        <td>윤직원</td><td class="nowrap">10.28 10:00</td>
-        <td>                              <span class="tag">설치 10.12</span></td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/25/">2611-00025</a></td><td><span class="badge b-green">설치 완료·개통</span></td>
-        <td>임*은<span class="sub">010-****-8689</span></td>
-        <td>KT<span class="sub">인터넷 베이직</span></td><td class="num">330,000원</td>
-        <td>윤직원</td><td class="nowrap">10.25 10:00</td>
-        <td>                              <span class="tag">설치 10.09</span></td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/22/">2611-00022</a></td><td><span class="badge b-black">설치일 확정</span></td>
-        <td>조*호<span class="sub">010-****-1009</span></td>
-        <td>SK브로드밴드<span class="sub">기가인터넷 + B tv</span></td><td class="num">450,000원</td>
-        <td>윤직원</td><td class="nowrap">10.22 10:00</td>
-        <td>                              <span class="tag">설치 11.13</span></td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/19/">2611-00019</a></td><td><span class="badge b-black">코드점 전달</span></td>
-        <td>최*원<span class="sub">010-****-4975</span></td>
-        <td>KT<span class="sub">인터넷 베이직</span></td><td class="num">330,000원</td>
-        <td>윤직원</td><td class="nowrap">10.19 10:00</td>
-        <td>                              </td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/16/">2611-00016</a></td><td><span class="badge b-green">해피콜 통과</span></td>
-        <td>김*준<span class="sub">010-****-4088</span></td>
-        <td>SK브로드밴드<span class="sub">기가인터넷 + B tv</span></td><td class="num">520,000원</td>
-        <td>윤직원</td><td class="nowrap">10.16 10:00</td>
-        <td>                    <span class="tag warn">정책 초과</span>          </td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/13/">2611-00013</a></td><td><span class="badge b-red">반려</span></td>
-        <td>서지민<span class="sub">010-6490-1126</span></td>
-        <td>KT<span class="sub">인터넷 베이직</span></td><td class="num">330,000원</td>
-        <td>윤직원</td><td class="nowrap">10.13 10:00</td>
-        <td><span class="tag bad">R03</span>                              </td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/10/">2611-00010</a></td><td><span class="badge b-yellow">재통화 대기</span></td>
-        <td>임*은<span class="sub">010-****-4081</span></td>
-        <td>SK브로드밴드<span class="sub">기가인터넷 + B tv</span></td><td class="num">450,000원</td>
-        <td>윤직원</td><td class="nowrap">10.10 10:00</td>
-        <td>                              </td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/7/">2611-00007</a></td><td><span class="badge b-blue">접수완료</span></td>
-        <td>조지호<span class="sub">010-7032-7469</span></td>
-        <td>KT<span class="sub">인터넷 베이직</span></td><td class="num">330,000원</td>
-        <td>윤직원</td><td class="nowrap">10.07 10:00</td>
-        <td>                              </td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/4/">2611-00004</a></td><td><span class="badge b-blue">접수완료</span></td>
-        <td>최주원<span class="sub">010-7708-6466</span></td>
-        <td>SK브로드밴드<span class="sub">기가인터넷 + B tv</span></td><td class="num">450,000원</td>
-        <td>윤직원</td><td class="nowrap">10.04 10:00</td>
-        <td>          <span class="tag bad">미비서류</span>                    </td></tr>
-          <tr><td><a href="/wired-erp-preview/branch/apps/1/">2611-00001</a></td><td><span class="badge b-gray">임시저장</span></td>
-        <td>김민준<span class="sub">010-3752-2038</span></td>
-        <td>KT<span class="sub">인터넷 베이직</span></td><td class="num">400,000원</td>
-        <td>윤직원</td><td class="nowrap">10.01 10:00</td>
-        <td>                    <span class="tag warn">정책 초과</span>          </td></tr>
+      <div class="table-wrap"><table class="t">
+    <thead><tr><th class="">접수번호</th><th class="">진행상태</th><th class="">처리 대기</th><th class="">고객</th><th class="">통신사 · 상품</th><th class="num">사은품</th><th class="">접수완료</th><th class="">설치·개통일</th><th>접수자</th><th>비고</th></tr></thead>
+    <tbody>      <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/43/">2611-00043</a></td><td class=""><span class="badge b-red">환수</span></td><td class=""></td><td class="">서*민<span class="sub">010-****-4192</span></td><td class="">KT<span class="sub">인터넷 베이직</span></td><td class="num">현금 330,000원</td><td class=""><span class="nowrap">10.04 10:00</span><span class="sub">등록 10.04 10:00</span></td><td class="">설치 10.07<span class="sub">개통 10.07</span></td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/40/">2611-00040</a></td><td class=""><span class="badge b-green">사은품 지급 완료</span></td><td class=""></td><td class="">임*은<span class="sub">010-****-4285</span></td><td class="">SK브로드밴드<span class="sub">기가인터넷 + B tv · B tv 이코노미</span></td><td class="num">현금 450,000원</td><td class=""><span class="nowrap">11.10 10:00</span><span class="sub">등록 11.10 10:00</span></td><td class="">설치 11.08<span class="sub">개통 11.08</span></td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/37/">2611-00037</a></td><td class=""><span class="badge b-green">설치 완료·개통</span></td><td class=""><span class="badge b-orange">상부 확인 대기</span><span class="sub">11.11 19:00</span></td><td class="">조*호<span class="sub">010-****-6794</span></td><td class="">KT<span class="sub">인터넷 베이직</span></td><td class="num">현금 330,000 · 신세계상품권 50,000원</td><td class=""><span class="nowrap">11.07 10:00</span><span class="sub">등록 11.07 10:00</span></td><td class="">설치 11.05<span class="sub">개통 11.05</span></td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/34/">2611-00034</a></td><td class=""><span class="badge b-green">설치 완료·개통</span></td><td class=""></td><td class="">최*원<span class="sub">010-****-3486</span></td><td class="">SK브로드밴드<span class="sub">기가인터넷 + B tv · B tv 이코노미</span></td><td class="num">현금 450,000 · 대납 25,000원</td><td class=""><span class="nowrap">11.04 10:00</span><span class="sub">등록 11.04 10:00</span></td><td class="">설치 11.02<span class="sub">개통 11.02</span></td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/31/">2611-00031</a></td><td class=""><span class="badge b-green">설치 완료·개통</span></td><td class=""></td><td class="">김*준<span class="sub">010-****-7040</span></td><td class="">KT<span class="sub">인터넷 베이직</span></td><td class="num">현금 400,000 · 추가 30,000원</td><td class=""><span class="nowrap">11.01 10:00</span><span class="sub">등록 11.01 10:00</span></td><td class="">설치 10.15<span class="sub">개통 10.15</span></td>        <td>윤직원</td>
+        <td>          <span class="tag warn">정책 초과</span></td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/28/">2611-00028</a></td><td class=""><span class="badge b-green">설치 완료·개통</span></td><td class=""></td><td class="">서*민<span class="sub">010-****-3446</span></td><td class="">SK브로드밴드<span class="sub">기가인터넷 + B tv · B tv 이코노미</span></td><td class="num">현금 450,000원</td><td class=""><span class="nowrap">10.29 10:00</span><span class="sub">등록 10.29 10:00</span></td><td class="">설치 10.12<span class="sub">개통 10.12</span></td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/25/">2611-00025</a></td><td class=""><span class="badge b-green">설치 완료·개통</span></td><td class=""></td><td class="">임*은<span class="sub">010-****-9180</span></td><td class="">KT<span class="sub">인터넷 베이직</span></td><td class="num">현금 330,000 · 신세계상품권 50,000원</td><td class=""><span class="nowrap">10.26 10:00</span><span class="sub">등록 10.26 10:00</span></td><td class="">설치 10.09<span class="sub">개통 10.09</span></td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/22/">2611-00022</a></td><td class=""><span class="badge b-black">설치일 확정</span></td><td class=""></td><td class="">조*호<span class="sub">010-****-2847</span></td><td class="">SK브로드밴드<span class="sub">기가인터넷 + B tv · B tv 이코노미</span></td><td class="num">현금 450,000원</td><td class=""><span class="nowrap">10.23 10:00</span><span class="sub">등록 10.23 10:00</span></td><td class="">설치 11.14</td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/19/">2611-00019</a></td><td class=""><span class="badge b-black">코드점 전달</span></td><td class=""></td><td class="">최*원<span class="sub">010-****-1001</span></td><td class="">KT<span class="sub">인터넷 베이직</span></td><td class="num">현금 330,000원</td><td class=""><span class="nowrap">10.20 10:00</span><span class="sub">등록 10.20 10:00</span></td><td class="">-</td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/16/">2611-00016</a></td><td class=""><span class="badge b-green">해피콜 통과</span></td><td class=""></td><td class="">김*준<span class="sub">010-****-2129</span></td><td class="">SK브로드밴드<span class="sub">기가인터넷 + B tv · B tv 이코노미</span></td><td class="num">현금 520,000 · 추가 30,000원</td><td class=""><span class="nowrap">10.17 10:00</span><span class="sub">등록 10.17 10:00</span></td><td class="">-</td>        <td>윤직원</td>
+        <td>          <span class="tag warn">정책 초과</span></td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/13/">2611-00013</a></td><td class=""><span class="badge b-red">반려</span> <span class="tag bad">R03</span></td><td class=""></td><td class="">서지민<span class="sub">010-6166-1032</span></td><td class="">KT<span class="sub">인터넷 베이직</span></td><td class="num">현금 330,000 · 신세계상품권 50,000원</td><td class=""><span class="nowrap">10.14 10:00</span><span class="sub">등록 10.14 10:00</span></td><td class="">-</td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/10/">2611-00010</a></td><td class=""><span class="badge b-yellow">재통화 대기</span></td><td class=""></td><td class="">임*은<span class="sub">010-****-3860</span></td><td class="">SK브로드밴드<span class="sub">기가인터넷 + B tv · B tv 이코노미</span></td><td class="num">현금 450,000원</td><td class=""><span class="nowrap">10.11 10:00</span><span class="sub">등록 10.11 10:00</span></td><td class="">-</td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/7/">2611-00007</a></td><td class=""><span class="badge b-blue">접수완료</span></td><td class=""><span class="badge b-orange">상부 확인 대기</span><span class="sub">11.11 19:00</span></td><td class="">조지호<span class="sub">010-7432-6603</span></td><td class="">KT<span class="sub">인터넷 베이직</span></td><td class="num">현금 330,000원</td><td class=""><span class="nowrap">10.08 10:00</span><span class="sub">등록 10.08 10:00</span></td><td class="">-</td>        <td>윤직원</td>
+        <td>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/4/">2611-00004</a></td><td class=""><span class="badge b-blue">접수완료</span></td><td class=""></td><td class="">최주원<span class="sub">010-3438-4205</span></td><td class="">SK브로드밴드<span class="sub">기가인터넷 + B tv · B tv 이코노미</span></td><td class="num">현금 450,000원</td><td class=""><span class="nowrap">10.05 10:00</span><span class="sub">등록 10.05 10:00</span></td><td class="">-</td>        <td>윤직원</td>
+        <td><span class="tag bad">미비서류</span>          </td></tr>
+          <tr class="">
+        <td class=""><a href="/wired-erp-preview/branch/apps/1/">2611-00001</a></td><td class=""><span class="badge b-gray">임시저장</span></td><td class=""></td><td class="">김민준<span class="sub">010-3752-2038</span></td><td class="">KT<span class="sub">인터넷 베이직</span></td><td class="num">현금 400,000 · 추가 30,000 · 신세계상품권 50,000 · 대납 25,000원</td><td class=""><span class="nowrap"></span><span class="sub">등록 10.02 10:00</span></td><td class="">-</td>        <td>윤직원</td>
+        <td>          <span class="tag warn">정책 초과</span></td></tr>
     </tbody></table></div>
     </div>
-    </main>
-  </div>
-</div>
+</main>
 <nav class="tabbar" aria-label="하단 메뉴">
-  <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apply/" class=" cta">접수하기</a><a href="/wired-erp-preview/branch/br/apps/" class="on">내 접수</a><a href="/wired-erp-preview/branch/br/settle/" class="">정산서</a>  <button type="button" data-toggle-side>전체 메뉴</button>
+  <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="on">내 접수</a><a href="/wired-erp-preview/branch/br/apply/" class=" cta">접수하기</a><a href="/wired-erp-preview/branch/br/settle/" class="">정산서</a>  <button type="button" data-toggle-side>전체 메뉴</button>
 </nav>
 <script src="/wired-erp-preview/assets/app.js"></script>
 <div style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#141414;color:#fff;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 하부점 대표 · 버튼은 동작하지 않아요 <a href="/wired-erp-preview/" style="color:#ff6e2e">역할 바꾸기</a></div>

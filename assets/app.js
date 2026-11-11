@@ -56,18 +56,38 @@
   }
 
   // 조건부 표시: data-show-if="name=value"
+  function curVal(name) {
+    let cur = '';
+    const inputs = $$(`[name="${name}"]`);
+    if (inputs.length === 1 && inputs[0].type === 'checkbox') return inputs[0].checked ? inputs[0].value : '0';
+    inputs.forEach(i => { if ((i.type === 'radio' || i.type === 'checkbox') ? i.checked : true) cur = i.value; });
+    return cur;
+  }
+  // data-show-if="name=a|b" (값 중 하나) 또는 "name1=a|name2=b" (조건 중 하나)
   function applyShowIf() {
     $$('[data-show-if]').forEach(el => {
-      const [name, val] = el.dataset.showIf.split('=');
-      const inputs = $$(`[name="${name}"]`);
-      let cur = '';
-      inputs.forEach(i => { if ((i.type === 'radio' || i.type === 'checkbox') ? i.checked : true) cur = i.value; });
-      const vals = val.split('|');
-      const on = vals.includes(cur);
+      const rules = el.dataset.showIf.split('|');
+      let name = '', on = false;
+      rules.forEach(r => {
+        if (r.includes('=')) { const [n, v] = r.split('='); name = n; if (curVal(n) === v) on = true; }
+        else if (curVal(name) === r) on = true;
+      });
       el.hidden = !on;
       $$('input,select,textarea', el).forEach(i => { i.disabled = !on; });
     });
   }
+  // 가입 통신사 버튼 → 그 통신사 상품만 보이게
+  function applyCarrier() {
+    const sel = $('#product_key');
+    if (!sel) return;
+    const c = curVal('carrier_pick');
+    $$('optgroup', sel).forEach(g => { g.hidden = !!c && g.dataset.carrier !== c; });
+    const opt = sel.selectedOptions[0];
+    if (opt && opt.value && c && opt.dataset.carrier !== c) sel.value = '';
+    if (!c) sel.options[0].textContent = '먼저 통신사를 고르세요'; else sel.options[0].textContent = '선택';
+  }
+  document.addEventListener('change', e => { if (e.target.name === 'carrier_pick') { applyCarrier(); giftCheck(); } });
+  applyCarrier();
   document.addEventListener('change', e => { if (e.target.name) applyShowIf(); });
   applyShowIf();
 
@@ -88,14 +108,23 @@
     }
   }
   if (pol) { pol.addEventListener('change', giftCheck); }
-  if (gift) {
-    gift.addEventListener('input', () => {
-      const d = gift.value.replace(/\D/g, '');
-      gift.value = d ? Number(d).toLocaleString() : '';
+  ['gift_amount', 'gift_extra', 'gift_voucher', 'gift_prepay'].forEach(n => {
+    const el = $(`[name=${n}]`);
+    if (!el) return;
+    el.addEventListener('input', () => {
+      const d = el.value.replace(/\D/g, '');
+      el.value = d ? Number(d).toLocaleString() : '';
       giftCheck();
     });
-  }
+  });
   giftCheck();
+  // 복사 버튼
+  $$('[data-copy]').forEach(b => b.addEventListener('click', async () => {
+    const src = $(b.dataset.copy);
+    if (!src) return;
+    try { await navigator.clipboard.writeText(src.value || src.textContent); b.textContent = '복사됨'; setTimeout(() => { b.textContent = '복사'; }, 1500); }
+    catch (e) { src.select && src.select(); }
+  }));
 
   // 숫자만 칸
   $$('[data-digits]').forEach(i => i.addEventListener('input', () => { i.value = i.value.replace(/[^\d-]/g, ''); }));
@@ -126,6 +155,7 @@
     const j = await r.json().catch(() => null);
     if (!r.ok || !j || !j.ok) { alert((j && j.error) || '열람할 수 없습니다.'); return; }
     Object.entries(j.data).forEach(([k, v]) => { $$(`[data-field="${k}"]`).forEach(el => { el.textContent = v || '-'; }); });
+    if (j.form && $('#cs-form')) $('#cs-form').value = j.form;
     btn.disabled = true; btn.textContent = '원본 표시 중';
     setTimeout(() => location.reload(), 60000);
   }));

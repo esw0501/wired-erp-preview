@@ -6,56 +6,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>정산서 · 콜로세움</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Ubuntu:wght@400;500;700&family=Ubuntu+Mono&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
 </head>
-<body data-idle="0" data-csrf="5c7cde8fc6e458e03fc5376c57fb00a4">
-<div class="shell">
-  <aside class="side" id="side">
+<body data-idle="0" data-csrf="47c53816123727dcea9468b3ac9f5124">
+<header class="topbar">
+  <div class="topbar-in">
     <a class="brand" href="/wired-erp-preview/branch/"><span class="brand-mark">C</span><span class="brand-name">콜로세움</span></a>
-    <div class="side-org">
-      <strong>한빛통신(데모)</strong>
-      <span>강남점</span>
-    </div>
-    <nav class="nav">
-              <a href="/wired-erp-preview/branch/br/" class="">대시보드</a>
-              <a href="/wired-erp-preview/branch/br/apply/" class="">접수 등록</a>
-              <a href="/wired-erp-preview/branch/br/apps/" class="">접수 목록</a>
-              <a href="/wired-erp-preview/branch/br/settle/" class="on">정산서</a>
-          </nav>
-    <div class="side-foot">
-      <span class="side-who">정점장 · 하부점 대표</span>
-      <a href="/wired-erp-preview/branch/password/">비밀번호 변경</a>
-      <a href="/wired-erp-preview/branch/br/users/">직원 계정</a>            <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="5c7cde8fc6e458e03fc5376c57fb00a4"><button class="linklike">로그아웃</button></form>
-    </div>
-  </aside>
-  <div class="main">
-    <header class="top">
+    <nav class="topnav" aria-label="주 메뉴">
+      <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="">접수 목록</a><a href="/wired-erp-preview/branch/br/apply/" class="">＋ 접수 등록</a><a href="/wired-erp-preview/branch/br/settle/" class="on">정산서</a><a href="/wired-erp-preview/branch/br/users/" class="">직원 계정</a>    </nav>
+    <div class="top-right">
+            <a class="bell" href="/wired-erp-preview/branch/notifications/" aria-label="알림">알림<b data-unread>13</b></a>
+            <span class="who">정점장 <small>한빛통신(데모) · 강남점 · 하부점 대표</small></span>
+      <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="47c53816123727dcea9468b3ac9f5124"><button class="btn sm">로그아웃</button></form>
       <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
-      <h1 class="top-title">정산서</h1>
-      <div class="top-right">
-                <a class="bell" href="/wired-erp-preview/branch/notifications/" aria-label="알림">알림<b data-unread>12</b></a>
-                <span class="who">정점장 <small>하부점 대표</small></span>
-        <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="5c7cde8fc6e458e03fc5376c57fb00a4"><button class="btn sm ghost">로그아웃</button></form>
-      </div>
-    </header>
-    <main class="page">
-            <div class="card">
+    </div>
+  </div>
+</header>
+<aside class="side" id="side">
+  <div class="side-org"><strong>정점장</strong><span>한빛통신(데모) · 강남점 · 하부점 대표</span></div>
+  <nav class="nav">
+    <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="">접수 목록</a><a href="/wired-erp-preview/branch/br/apply/" class="">＋ 접수 등록</a><a href="/wired-erp-preview/branch/br/settle/" class="on">정산서</a><a href="/wired-erp-preview/branch/br/users/" class="">직원 계정</a>  </nav>
+  <div class="side-foot">
+    <a href="/wired-erp-preview/branch/password/">비밀번호 변경</a>
+        <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="47c53816123727dcea9468b3ac9f5124"><button class="linklike">로그아웃</button></form>
+  </div>
+</aside>
+<main class="page">
+  <div class="page-head">
+    <h1 class="page-title">정산서</h1>
+    <span class="page-org">한빛통신(데모) · 강남점</span>
+  </div>
+    <div class="card">
   <div class="card-head"><h2>확정된 정산서</h2><span class="muted small">상부 대표가 확정한 정산서만 보입니다. 항목별로 이의를 제기할 수 있습니다.</span></div>
     <div class="table-wrap"><table class="t">
     <thead><tr><th>정산월(개통월)</th><th class="num">개통</th><th class="num">수수료</th><th class="num">사은품 대납</th><th class="num">환수</th><th class="num">지급액</th><th class="num">입금됨</th><th class="num">남은 금액</th><th>확정일</th></tr></thead>
-    <tbody>      <tr><td><a href="/wired-erp-preview/branch/br/settle/1/">2026-10</a></td><td class="num">4건</td><td class="num">1,320,000원</td>
-        <td class="num neg">-1,060,000원</td><td class="num neg">0원</td><td class="num"><b>260,000원</b></td><td class="num">260,000원</td><td class="num "><span class="badge b-green">완료</span></td><td>2026.11.10</td></tr>
+    <tbody>      <tr><td><a href="/wired-erp-preview/branch/br/settle/1/">2026-10</a></td><td class="num">4건</td><td class="num">1,350,000원</td>
+        <td class="num neg">-1,060,000원</td><td class="num neg">0원</td><td class="num"><b>290,000원</b></td><td class="num">290,000원</td><td class="num "><span class="badge b-green">완료</span></td><td>2026.11.11</td></tr>
     </tbody></table></div>
   </div>
-    </main>
-  </div>
-</div>
+</main>
 <nav class="tabbar" aria-label="하단 메뉴">
-  <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apply/" class=" cta">접수하기</a><a href="/wired-erp-preview/branch/br/apps/" class="">내 접수</a><a href="/wired-erp-preview/branch/br/settle/" class="on">정산서</a>  <button type="button" data-toggle-side>전체 메뉴</button>
+  <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="">내 접수</a><a href="/wired-erp-preview/branch/br/apply/" class=" cta">접수하기</a><a href="/wired-erp-preview/branch/br/settle/" class="on">정산서</a>  <button type="button" data-toggle-side>전체 메뉴</button>
 </nav>
 <script src="/wired-erp-preview/assets/app.js"></script>
 <div style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#141414;color:#fff;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 하부점 대표 · 버튼은 동작하지 않아요 <a href="/wired-erp-preview/" style="color:#ff6e2e">역할 바꾸기</a></div>
