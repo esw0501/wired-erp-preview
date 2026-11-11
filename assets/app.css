@@ -809,3 +809,7 @@ a.kpi, .kpi > a:hover { border-color: var(--ink3); }
 @media (max-width: 760px) { .brand-logo { height: 32px; } }
 .pub-top .brand { background: #fff; border-radius: 8px; padding: 4px 10px; }
 .pub-top .brand-logo { height: 30px; }
+/* 정책 관리 표 */
+.t select { min-width: 120px; }
+.t input[name=label] { min-width: 120px; }
+.price-line { display: block; padding-top: 10px; font-size: 14px; }

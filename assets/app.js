@@ -84,6 +84,8 @@
     $$('optgroup', sel).forEach(g => { g.hidden = !!c && g.dataset.carrier !== c; });
     const opt = sel.selectedOptions[0];
     if (opt && opt.value && c && opt.dataset.carrier !== c) sel.value = '';
+    const reg = $('#region_id');
+    if (reg) { $$('option[data-carrier]', reg).forEach(o => { o.hidden = !!c && o.dataset.carrier !== c; }); const ro = reg.selectedOptions[0]; if (ro && ro.value && c && ro.dataset.carrier !== c) reg.value = ''; }
     if (!c) sel.options[0].textContent = '먼저 통신사를 고르세요'; else sel.options[0].textContent = '선택';
   }
   document.addEventListener('change', e => { if (e.target.name === 'carrier_pick') { applyCarrier(); giftCheck(); } });
