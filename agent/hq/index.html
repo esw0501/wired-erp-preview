@@ -5,11 +5,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>대시보드 · 콜로세움</title>
+<title>홈 · 콜로세움</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
 </head>
-<body data-idle="0" data-csrf="9bb1b8ad4a9324eac2b204602c3f0f54">
+<body data-idle="0" data-csrf="254ae7b35efd62c2e9fd0e7f0998295c">
 <header class="topbar">
   <div class="topbar-in">
     <a class="brand" href="/wired-erp-preview/agent/"><span class="brand-mark">C</span><span class="brand-name">콜로세움</span></a>
@@ -18,7 +18,7 @@
     <div class="top-right">
             <a class="bell" href="/wired-erp-preview/agent/notifications/" aria-label="알림">알림<b data-unread hidden>0</b></a>
             <span class="who">박상담 <small>한빛통신(데모) · 상부 · 해피콜 상담원</small></span>
-      <form method="post" action="/wired-erp-preview/agent/logout/" class="top-logout"><input type="hidden" name="_csrf" value="9bb1b8ad4a9324eac2b204602c3f0f54"><button class="btn sm">로그아웃</button></form>
+      <form method="post" action="/wired-erp-preview/agent/logout/" class="top-logout"><input type="hidden" name="_csrf" value="254ae7b35efd62c2e9fd0e7f0998295c"><button class="btn sm">로그아웃</button></form>
       <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
     </div>
   </div>
@@ -29,68 +29,60 @@
     <a href="/wired-erp-preview/agent/hq/" class="on">홈</a><a href="/wired-erp-preview/agent/hq/happycall/" class="">해피콜</a>  </nav>
   <div class="side-foot">
     <a href="/wired-erp-preview/agent/password/">비밀번호 변경</a>
-        <form method="post" action="/wired-erp-preview/agent/logout/" class="side-logout"><input type="hidden" name="_csrf" value="9bb1b8ad4a9324eac2b204602c3f0f54"><button class="linklike">로그아웃</button></form>
+        <form method="post" action="/wired-erp-preview/agent/logout/" class="side-logout"><input type="hidden" name="_csrf" value="254ae7b35efd62c2e9fd0e7f0998295c"><button class="linklike">로그아웃</button></form>
   </div>
 </aside>
 <main class="page">
   <div class="page-head">
-    <h1 class="page-title">대시보드</h1>
+    <h1 class="page-title">홈</h1>
     <span class="page-org">한빛통신(데모) · 상부</span>
   </div>
     <nav class="flow" style="--n:6" aria-label="업무 흐름">
   <a href="/wired-erp-preview/agent/hq/happycall/"><span class="k">① 접수완료</span><span class="v">2</span></a>
-  <a href="/wired-erp-preview/agent/hq/happycall/"><span class="k">② 해피콜 중·재통화</span><span class="v">1</span></a>
-  <a href="/wired-erp-preview/agent/hq/happycall/" class="warn"><span class="k">반려 (하부점 수정 중)</span><span class="v">1</span></a>
-  <a href="/wired-erp-preview/agent/hq/happycall/"><span class="k">③ 통과 · 전달 대기</span><span class="v">2</span></a>
-  <a href="/wired-erp-preview/agent/hq/happycall/"><span class="k">④ 코드점 진행</span><span class="v">3</span></a>
+    <a href="/wired-erp-preview/agent/hq/happycall/"><span class="k">② 해피콜 중</span><span class="v">1</span></a>
+  <a href="/wired-erp-preview/agent/hq/happycall/" class="warn"><span class="k">반려</span><span class="v">1</span></a>
+  <a href="/wired-erp-preview/agent/hq/happycall/"><span class="k">③ 통과·전달 대기</span><span class="v">2</span></a>
+    <a href="/wired-erp-preview/agent/hq/happycall/"><span class="k">④ 코드점 진행</span><span class="v">3</span></a>
   <a href="/wired-erp-preview/agent/hq/happycall/"><span class="k">⑤ 이번 달 개통</span><span class="v">9</span></a>
 </nav>
 
-<section class="card">
-  <div class="card-head"><h2>내 실적</h2><nav class="month-nav" aria-label="기준 월">
+<div class="home-grid">
+  <section class="card home-todo">
+    <div class="card-head"><h2>지금 할 일</h2><span class="label">1가지 · 없음 1</span></div>
+        <ul class="todo compact">
+              <li class=""><span class="n">3</span><span class="t"><b>내 해피콜 대기</b></span><span class="a"><a class="btn sm primary" href="/wired-erp-preview/agent/hq/happycall/">대기열</a></span></li>
+          </ul>
+      </section>
+
+    <section class="card home-money">
+    <div class="card-head"><h2>오늘</h2><span class="label">11.11 (수)</span></div>
+    <div class="kpi">
+      <span><span class="k">내 신규 배정</span><b>0</b></span>
+      <span><span class="k">통화 중</span><b>0</b></span>
+      <span class="open"><span class="k">오늘 반려</span><b>3</b></span>
+      <span><span class="k">이번 달 개통</span><b>9</b></span>
+    </div>
+  </section>
+  
+  <section class="card home-counts">
+    <div class="card-head"><h2>내 실적</h2><nav class="month-nav" aria-label="기준 월">
   <a class="btn sm ghost" href="/wired-erp-preview/agent/hq/" aria-label="이전 달">◀</a>
   <b>2026년 11월</b>
   <span class="btn sm ghost" aria-hidden="true" style="visibility:hidden">▶</span>  </nav>
 </div>
-      <div class="grid g4 counts">
-      <div class="stat"><span class="k">통화한 접수</span><span class="v">17</span><span class="delta">통화 17회 · 오늘 17</span></div>
-      <div class="stat"><span class="k">통과</span><span class="v">14</span><span class="delta">반려 1</span></div>
-      <div class="stat"><span class="k">통과율</span><span class="v">93%</span><span class="delta">통과 ÷ (통과+반려)</span></div>
-      <div class="stat"><span class="k">건당 통화</span><span class="v">1</span><span class="delta">재통화가 많으면 커짐</span></div>
+        <div class="kpi">
+      <span><span class="k">통화한 접수</span><b>17</b><span class="s">통화 17회 · 오늘 17</span></span>
+      <span><span class="k">통과</span><b>14</b><span class="s">반려 1</span></span>
+      <span><span class="k">통과율</span><b>93%</b></span>
+      <span><span class="k">건당 통화</span><b>1</b></span>
     </div>
+      </section>
+
+    <section class="card home-quality">
+    <div class="card-head"><h2>오늘</h2><span class="label">11.11</span></div>
+    <div class="kpi"><span><span class="k">내 신규 배정</span><b>0</b></span><span><span class="k">통화 중</span><b>0</b></span><span><span class="k">오늘 반려</span><b>3</b></span></div>
   </section>
-
-
-<div class="grid split">
-  <section class="card">
-    <div class="card-head"><h2>지금 할 일</h2><span class="label">1건 남음</span></div>
-    <ul class="todo">
-              <li class="">
-          <span class="n">3</span>
-          <span class="t"><b>내 해피콜 대기</b><span>편법 위험(빨강) 건이 위로 정렬됩니다.</span></span>
-          <span class="a"><a class="btn sm primary" href="/wired-erp-preview/agent/hq/happycall/">대기열 열기</a></span>
-        </li>
-              <li class="done">
-          <span class="n">0</span>
-          <span class="t"><b>재통화 시각이 된 건</b><span>약속한 시각이 지났습니다. 먼저 전화하세요.</span></span>
-          <span class="a"><span class="label">없음</span></span>
-        </li>
-          </ul>
-  </section>
-
-  <div class="stack">
-    <section class="card">
-      <div class="card-head"><h2>오늘</h2><span class="label">11.11 (수)</span></div>
-      <div class="grid g3">
-        <div class="stat"><span class="k">내 신규 배정</span><span class="v">0</span></div>
-        <div class="stat"><span class="k">통화 중</span><span class="v">0</span></div>
-        <div class="stat hot"><span class="k">반려</span><span class="v">3</span></div>
-      </div>
-    </section>
-
-      </div>
-</div>
-
+  </div>
 </main>
 <nav class="tabbar" aria-label="하단 메뉴">
   <a href="/wired-erp-preview/agent/hq/" class="on">홈</a><a href="/wired-erp-preview/agent/hq/happycall/" class="">해피콜</a>  <button type="button" data-toggle-side>전체 메뉴</button>

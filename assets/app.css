@@ -706,3 +706,98 @@ body.bare { background: var(--bg); }
 .kind-table input[name=name] { min-width: 140px; }
 .mod-row { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 16px; align-items: start; }
 .mod-row .seg { height: 40px; }
+
+/* ---------- 색: 포인트 딥그린 하나, 버튼은 진한 회색, 바탕 연한 회색 ---------- */
+:root {
+  --bg: #F4F5F4; --panel: #FFFFFF; --panel2: #F7F8F7; --line: #E4E7E5; --line2: #CCD2CE;
+  --ink: #23272B; --ink2: #4A5157; --ink3: #737B82;
+  --primary: #2B3036; --primary2: #15181C;           /* 주 버튼·강조 글자 = 진한 회색 */
+  --point: #1F7A5C; --point-soft: #E3F1EB;           /* 포인트 = 딥그린 (탭 밑줄·링크·선택 칩·CTA) */
+  --blue: #1F7A5C; --blue-soft: #E3F1EB; --orange: #C2410C;
+  --green: #1F7A5C; --green-soft: #E3F1EB; --yellow: #B45309; --yellow-soft: #FBEFD5; --red: #B42318; --red-soft: #FCE8E6;
+}
+.brand-mark { background: var(--point); }
+.brand-name { color: var(--ink); }
+.topnav a.on { color: var(--ink); border-bottom-color: var(--point); }
+.topnav a:hover { color: var(--point); }
+.nav a.on { color: var(--point); border-left-color: var(--point); background: var(--point-soft); }
+.bell b { background: var(--orange); }
+a { color: var(--point); }
+.t a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line2); text-underline-offset: 3px; }
+.t a:hover { text-decoration-color: var(--point); }
+.btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+.btn.primary:hover { background: var(--primary2); border-color: var(--primary2); }
+.btn.dark { background: var(--primary); border-color: var(--primary); }
+.chips a.on { background: var(--point); border-color: var(--point); color: #fff; }
+.chips a b { color: var(--ink2); } .chips a.on b { color: #fff; }
+.tabs a.on { color: var(--ink); border-bottom-color: var(--point); }
+.b-blue { background: var(--panel2); border-color: var(--line2); color: var(--ink2); }
+.b-green { background: var(--green-soft); color: #14532D; }
+.b-orange { background: #FDEBD3; color: #7C2D12; }
+.b-black { background: var(--primary); color: #fff; }
+.stat { border-left-color: var(--line2); }
+.stat.hot { border-left-color: var(--point); }
+.seg input:checked + span { background: var(--primary); color: #fff; }
+.carrier-pick input:checked + span { background: var(--primary); color: #fff; }
+input:focus, select:focus, textarea:focus { border-color: var(--point); box-shadow: 0 0 0 3px var(--point-soft); }
+:focus-visible { outline-color: var(--point); }
+.flow a:hover { background: var(--point-soft); }
+.flow .v { color: var(--ink); }
+.flow a.warn .v { color: var(--orange); }
+.flow a.cta .v { color: var(--point); }
+.todo .n { color: var(--ink); }
+.todo li.urgent .n { color: var(--orange); }
+.pager .on { background: var(--primary); border-color: var(--primary); }
+.tabbar a.on { color: var(--ink); border-top-color: var(--point); }
+.tabbar a.cta { color: var(--point); }
+.mleft.open b { color: var(--ink); }
+.bare-box { border-top-color: var(--point); }
+.fieldset > .fs-head .no { background: var(--primary); }
+.nav a:hover { color: var(--point); }
+
+/* ---------- 홈: 한 화면 ---------- */
+.flow a { padding: 10px 14px 8px 22px; }
+.flow .v { font-size: 26px; }
+.home-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); grid-template-areas: "todo money" "counts quality"; gap: var(--gap); }
+.home-todo { grid-area: todo; } .home-money { grid-area: money; } .home-counts { grid-area: counts; } .home-quality { grid-area: quality; }
+.home-grid .card { padding: 16px 20px; }
+.home-grid .card-head { margin-bottom: 10px; min-height: 28px; }
+.todo.compact { border-top: 1px solid var(--line); }
+.todo.compact li { grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; padding: 8px 0; }
+.todo.compact .n { font-size: 22px; font-weight: 800; }
+.todo.compact .t b { font-size: 14px; font-weight: 600; }
+.todo.compact .a form { margin: 0; }
+.kpi { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.kpi > * { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r2); background: var(--panel2); text-decoration: none; color: inherit; min-width: 0; }
+.kpi .k { font-size: 12.5px; color: var(--ink3); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kpi .k small { font-weight: 400; margin-left: 4px; }
+.kpi b { font-size: 20px; font-weight: 800; letter-spacing: -.01em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.kpi .s { font-size: 12px; color: var(--ink3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kpi > .open { border-color: var(--point); background: var(--point-soft); }
+.kpi > .bad b, .kpi > .bad { color: var(--red); }
+.kpi > .total { background: var(--primary); color: #fff; border-color: var(--primary); }
+.kpi > .total .k, .kpi > .total .s { color: rgba(255,255,255,.75); }
+.kpi > .total.bad { background: var(--red); }
+a.kpi, .kpi > a:hover { border-color: var(--ink3); }
+.home-counts .kpi { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.t.compact th, .t.compact td { padding: 7px 10px; }
+.noti.compact li { padding: 6px 0; font-size: 13.5px; }
+@media (max-width: 1100px) { .home-counts .kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .home-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "todo" "money" "counts" "quality"; } }
+@media (max-width: 760px) { .kpi { grid-template-columns: repeat(2, minmax(0, 1fr)); } .flow .v { font-size: 22px; } }
+/* 홈 더 촘촘히: 1440×900 에서 스크롤 없이 */
+.home-grid { gap: 12px; }
+.home-grid .card { padding: 14px 18px; }
+.flow a { padding: 8px 14px 6px 22px; }
+.flow .v { font-size: 24px; }
+.page-head { line-height: 1.2; }
+.page { padding: 14px var(--pad) var(--pad); }
+.home-grid .card-head { margin-bottom: 8px; }
+.todo.compact li { padding: 7px 0; }
+.home-grid .card { padding: 12px 18px 14px; }
+@media (max-width: 760px) {
+  .todo.compact li { grid-template-columns: 36px minmax(0, 1fr) auto; gap: 8px; }
+  .todo.compact .a { grid-column: auto; margin-top: 0; }
+  .todo.compact .a .btn { height: 36px; padding: 0 12px; }
+  .todo.compact .a .btn.primary { background: var(--panel); color: var(--ink); border-color: var(--line2); }
+}
