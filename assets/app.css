@@ -801,6 +801,23 @@ a.kpi, .kpi > a:hover { border-color: var(--ink3); }
   .todo.compact .a .btn { height: 36px; padding: 0 12px; }
   .todo.compact .a .btn.primary { background: var(--panel); color: var(--ink); border-color: var(--line2); }
 }
+/* AI 가공 초안 (v2 3단계) */
+.grid.split.even { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.ai-split { display: grid; grid-template-columns: minmax(280px, 2fr) minmax(0, 3fr); gap: 16px; align-items: start; }
+.ai-src .ai-img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--r); }
+.ai-src .ai-pdf { width: 100%; height: 720px; border: 1px solid var(--line); border-radius: var(--r); background: #fff; }
+.ai-text { max-height: 720px; overflow: auto; }
+.ai-text table.mono td { font-family: var(--mono); font-size: 12.5px; padding: 4px 8px; white-space: nowrap; }
+.ai-grid th input, .ai-grid td input, .ai-grid td select { height: 32px; font-size: 13.5px; padding: 0 8px; }
+.ai-grid .ai-name { min-width: 180px; }
+.ai-grid .ai-kind { min-width: 110px; }
+.ai-grid .ai-amt { width: 104px; text-align: right; font-family: var(--mono); }
+.ai-grid .ai-time { width: 136px; font-family: var(--mono); font-size: 12.5px; }
+.ai-grid tr.ai-low td { background: var(--yellow-soft); }
+.ai-grid tr.ai-blank td input, .ai-grid tr.ai-blank td select { border-style: dashed; }
+.tag.ok { border-color: #8FC9B0; color: #0F5A42; background: var(--green-soft); }
+@media (max-width: 900px) { .ai-split { grid-template-columns: 1fr; } .ai-src .ai-pdf, .ai-text { height: 360px; max-height: 360px; } }
+
 /* 로고 */
 .brand-logo { display: block; height: 36px; width: auto; }
 .brand-logo.lg { height: 54px; margin: 0 auto; }
@@ -813,3 +830,18 @@ a.kpi, .kpi > a:hover { border-color: var(--ink3); }
 .t select { min-width: 120px; }
 .t input[name=label] { min-width: 120px; }
 .price-line { display: block; padding-top: 10px; font-size: 14px; }
+
+/* 휴대폰에서도 표 모양을 지키는 표(.t.keep): 원본 글자 표·AI 초안 편집표 — 카드로 풀면 열 뜻을 잃는다 */
+@media (max-width: 760px) {
+  .table-wrap.scroll { overflow-x: auto; margin: 0 calc(var(--pad) * -1); padding: 0 var(--pad); }
+  .t.keep { display: table; width: max-content; min-width: 100%; }
+  .t.keep thead { display: table-header-group; }
+  .t.keep tbody { display: table-row-group; }
+  .t.keep tr { display: table-row; border: 0; border-radius: 0; background: transparent; padding: 0; margin: 0; }
+  .t.keep th, .t.keep td { display: table-cell; text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; gap: 0; }
+  .t.keep th.num, .t.keep td.num { text-align: right; }
+  .t.keep td::before { display: none; }
+  .t.keep td:empty { display: table-cell; }
+  .t.keep tr.ai-low td { background: var(--yellow-soft); }
+  .ai-grid .ai-name { min-width: 150px; }
+}

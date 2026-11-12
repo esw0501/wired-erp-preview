@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>정책 관리 · 킹넷</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
+</head>
+<body data-idle="0" data-csrf="b8db67f283f02e5cc18e9a13591e9dd2">
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="/wired-erp-preview/owner/"><img class="brand-logo" src="/wired-erp-preview/assets/logo.png" alt="킹넷" width="71" height="37"></a>
+    <nav class="topnav" aria-label="주 메뉴">
+      <a href="/wired-erp-preview/owner/hq/" class="">홈</a><a href="/wired-erp-preview/owner/hq/apps/" class="">접수 목록</a><a href="/wired-erp-preview/owner/hq/happycall/" class="">해피콜</a><a href="/wired-erp-preview/owner/hq/codeshop/" class="">코드점 전달·개통</a><a href="/wired-erp-preview/owner/hq/settle/" class="">정산 관리</a><a href="/wired-erp-preview/owner/hq/policy/" class="on">정책 관리</a><a href="/wired-erp-preview/owner/hq/branches/" class="">하부점·계정</a><a href="/wired-erp-preview/owner/hq/lists/" class="">목록·화면 설정</a><a href="/wired-erp-preview/owner/hq/settings/" class="">설정·로그</a>    </nav>
+    <div class="top-right">
+            <a class="bell" href="/wired-erp-preview/owner/notifications/" aria-label="알림">알림<b data-unread>8</b></a>
+            <span class="who">김대표 <small>한빛통신(데모) · 상부 · 상부 대표</small></span>
+      <form method="post" action="/wired-erp-preview/owner/logout/" class="top-logout"><input type="hidden" name="_csrf" value="b8db67f283f02e5cc18e9a13591e9dd2"><button class="btn sm">로그아웃</button></form>
+      <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
+    </div>
+  </div>
+</header>
+<aside class="side" id="side">
+  <div class="side-org"><strong>김대표</strong><span>한빛통신(데모) · 상부 · 상부 대표</span></div>
+  <nav class="nav">
+    <a href="/wired-erp-preview/owner/hq/" class="">홈</a><a href="/wired-erp-preview/owner/hq/apps/" class="">접수 목록</a><a href="/wired-erp-preview/owner/hq/happycall/" class="">해피콜</a><a href="/wired-erp-preview/owner/hq/codeshop/" class="">코드점 전달·개통</a><a href="/wired-erp-preview/owner/hq/settle/" class="">정산 관리</a><a href="/wired-erp-preview/owner/hq/policy/" class="on">정책 관리</a><a href="/wired-erp-preview/owner/hq/branches/" class="">하부점·계정</a><a href="/wired-erp-preview/owner/hq/lists/" class="">목록·화면 설정</a><a href="/wired-erp-preview/owner/hq/settings/" class="">설정·로그</a>  </nav>
+  <div class="side-foot">
+    <a href="/wired-erp-preview/owner/password/">비밀번호 변경</a>
+    <a href="/wired-erp-preview/owner/downloads/">다운로드 요청</a>    <form method="post" action="/wired-erp-preview/owner/logout/" class="side-logout"><input type="hidden" name="_csrf" value="b8db67f283f02e5cc18e9a13591e9dd2"><button class="linklike">로그아웃</button></form>
+  </div>
+</aside>
+<main class="page">
+  <div class="page-head">
+    <h1 class="page-title">정책 관리</h1>
+    <span class="page-org">한빛통신(데모) · 상부</span>
+  </div>
+    <div class="tabs"><a href="/wired-erp-preview/owner/hq/policy/tab-ai/" class="">AI 가공(원본 → 초안)</a><a href="/wired-erp-preview/owner/hq/policy/tab-sheets/" class="on">1 정책표 등록</a><a href="/wired-erp-preview/owner/hq/policy/tab-link/" class="">2 품목 연결</a><a href="/wired-erp-preview/owner/hq/policy/tab-routes/" class="">3 지역 연결</a><a href="/wired-erp-preview/owner/hq/policy/tab-products/" class="">접수 품목</a><a href="/wired-erp-preview/owner/hq/policy/tab-codeshop/" class="">코드점 양식</a></div>
+
+<div class="grid split">
+  <div class="stack">
+    <section class="card">
+      <div class="card-head"><h2>정책표 등록</h2><a class="btn sm ghost" href="/wired-erp-preview/owner/hq/policy/sample/">예시 엑셀</a></div>
+      <p class="hint">A열 = 상품명, B열부터 = 적용 시각(2026-11-01 또는 2026-11-01 16:00) 머리글과 금액. 같은 통신사·지역·종류·이름으로 다시 올리면 금액이 갱신되고 이전 금액은 이력으로 남습니다. 상품명 앞 <code>+</code> 더함, <code>-</code> 뺌, <code>#</code> 계산 제외.</p>
+      <form method="post" action="/wired-erp-preview/owner/hq/policy/upload/" enctype="multipart/form-data" class="stack"><input type="hidden" name="_csrf" value="b8db67f283f02e5cc18e9a13591e9dd2">        <div class="fgrid">
+          <label>통신사<select name="carrier" required><option>KT</option><option>SK브로드밴드</option><option>LG U+</option><option>SKT</option><option>기타</option></select></label>
+          <label>종류<select name="kind"><option value="pay">지급 수수료(상부→하부점)</option><option value="receive">받을 단가(코드점→상부)</option></select></label>
+          <label>지역 이름<input name="region" maxlength="40" placeholder="비우면 공통"></label>
+          <label>정책표 이름<input name="name" maxlength="80" value="기본"></label>
+          <label>코드점<select name="code_shop_id"><option value="0">-</option><option value="1">대한코드점</option></select></label>
+          <label class="s2">엑셀 파일 (xlsx·csv, 2MB)<input type="file" name="file" accept=".xlsx,.csv" required></label>
+        </div>
+        <div class="row end"><button class="btn primary">등록 · 자동 적용</button></div>
+      </form>
+    </section>
+    <section class="card">
+      <div class="card-head"><h2>등록한 정책표 <b>6</b></h2></div>
+            <div class="table-wrap"><table class="t">
+        <thead><tr><th>통신사 · 지역</th><th>이름</th><th>종류</th><th>코드점</th><th class="num">행</th><th class="num">미연결</th><th>마지막 적용</th><th></th></tr></thead>
+        <tbody>          <tr class=""><td>KT<span class="sub">공통</span></td><td><a href="?tab=sheets&amp;sheet=2">기본</a></td>
+            <td>받을</td><td>-</td><td class="num">2</td><td class="num">0</td>
+            <td class="nowrap">2026-11-01 00:00</td>
+            <td><a class="btn sm" href="?tab=sheets&amp;sheet=2">열기</a></td></tr>
+                  <tr class=""><td>KT<span class="sub">공통</span></td><td><a href="?tab=sheets&amp;sheet=1">기본</a></td>
+            <td>지급</td><td>-</td><td class="num">2</td><td class="num">0</td>
+            <td class="nowrap">2026-11-01 00:00</td>
+            <td><a class="btn sm" href="?tab=sheets&amp;sheet=1">열기</a></td></tr>
+                  <tr class=""><td>LG U+<span class="sub">공통</span></td><td><a href="?tab=sheets&amp;sheet=6">기본</a></td>
+            <td>받을</td><td>-</td><td class="num">2</td><td class="num">0</td>
+            <td class="nowrap">2026-11-01 00:00</td>
+            <td><a class="btn sm" href="?tab=sheets&amp;sheet=6">열기</a></td></tr>
+                  <tr class=""><td>LG U+<span class="sub">공통</span></td><td><a href="?tab=sheets&amp;sheet=5">기본</a></td>
+            <td>지급</td><td>-</td><td class="num">2</td><td class="num">0</td>
+            <td class="nowrap">2026-11-01 00:00</td>
+            <td><a class="btn sm" href="?tab=sheets&amp;sheet=5">열기</a></td></tr>
+                  <tr class=""><td>SK브로드밴드<span class="sub">공통</span></td><td><a href="?tab=sheets&amp;sheet=4">기본</a></td>
+            <td>받을</td><td>-</td><td class="num">2</td><td class="num">0</td>
+            <td class="nowrap">2026-09-01 00:00</td>
+            <td><a class="btn sm" href="?tab=sheets&amp;sheet=4">열기</a></td></tr>
+                  <tr class=""><td>SK브로드밴드<span class="sub">공통</span></td><td><a href="?tab=sheets&amp;sheet=3">기본</a></td>
+            <td>지급</td><td>-</td><td class="num">2</td><td class="num">0</td>
+            <td class="nowrap">2026-09-01 00:00</td>
+            <td><a class="btn sm" href="?tab=sheets&amp;sheet=3">열기</a></td></tr>
+        </tbody></table></div>
+          </section>
+  </div>
+  <div class="stack">
+        <section class="card">
+      <div class="card-head"><h2>처음이라면</h2></div>
+      <ol class="small" style="padding-left:18px;line-height:1.9">
+        <li><b>정책표 등록</b> — 코드점이 준 표를 예시 형식으로 가공해 올립니다(3단계에서 AI가 원본을 대신 가공).</li>
+        <li><b>품목 연결</b> — 엑셀의 상품명을 접수 화면의 품목에 연결합니다. 이름이 같으면 자동.</li>
+        <li><b>지역 연결</b> — 접수에서 고르는 지역마다 받을/지급 정책표와 코드점을 정합니다.</li>
+        <li>이후엔 같은 이름으로 엑셀만 다시 올리면 금액이 갱신되고 접수 금액이 다시 계산됩니다. 확정된 정산서는 바뀌지 않습니다.</li>
+      </ol>
+      <p class="hint">금액 적용 기준은 접수의 <b>접수완료 일시</b>입니다. 15:59 접수는 16:00 정책 직전 금액, 시각이 없으면 00:00부터.</p>
+    </section>
+      </div>
+</div>
+
+</main>
+<nav class="tabbar" aria-label="하단 메뉴">
+  <a href="/wired-erp-preview/owner/hq/" class="">홈</a><a href="/wired-erp-preview/owner/hq/apps/" class="">접수</a><a href="/wired-erp-preview/owner/hq/happycall/" class="">해피콜</a><a href="/wired-erp-preview/owner/hq/codeshop/" class="">코드점</a>  <button type="button" data-toggle-side>전체 메뉴</button>
+</nav>
+<script src="/wired-erp-preview/assets/app.js"></script>
+<div style="position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;align-items:center;gap:10px;background:#141414;color:#fff;font:600 12px/1.4 Pretendard,system-ui,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.2);max-width:calc(100vw - 32px);flex-wrap:wrap">미리보기 · 상부 대표 · 버튼은 동작하지 않아요 <a href="/wired-erp-preview/" style="color:#ff6e2e">역할 바꾸기</a></div>
+<script>document.addEventListener('submit',function(e){e.preventDefault();var a=e.target.getAttribute('action')||'';if(/\/start\/$/.test(a)){location.href=a.replace(/start\/$/,'');return;}if(/demo-login\/$/.test(a)){var id=(e.target.querySelector('[name=login_id]')||{}).value;var f={'hq.owner':'owner','hq.mgr':'owner','agent1':'agent','br1.owner':'branch','br1.staff':'staff','sysadmin':'sys'}[id];if(f){location.href='/wired-erp-preview/'+f+'/';return;}}alert('미리보기에서는 저장·처리가 동작하지 않아요.');},true);document.querySelectorAll('[data-reveal]').forEach(function(b){b.replaceWith(b.cloneNode(true));});</script>
+</body>
+</html>
