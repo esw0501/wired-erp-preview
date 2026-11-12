@@ -846,6 +846,14 @@ a.kpi, .kpi > a:hover { border-color: var(--ink3); }
   .ai-grid .ai-name { min-width: 150px; }
 }
 
+/* 고객센터 (v2 6단계) */
+.notice-body { white-space: pre-wrap; line-height: 1.7; font-size: 15px; }
+.answer { padding: 12px 14px; border-left: 3px solid var(--green); background: var(--green-soft); border-radius: var(--r); }
+.chk-row { flex-direction: row !important; align-items: center; gap: 8px; }
+.chk-row input { width: 18px; height: 18px; }
+.nav-badge { display: inline-block; min-width: 18px; padding: 0 5px; margin-left: 6px; border-radius: 9px; background: var(--red); color: #fff; font-size: 11px; line-height: 18px; text-align: center; font-weight: 700; }
+.noti li.unread > span > a { font-weight: 700; }
+
 /* AI 검증 (v2 5단계) */
 details.anom { border: 1px solid var(--line); border-radius: var(--r2); padding: 10px 12px; margin-bottom: 8px; background: var(--panel); }
 details.anom summary { cursor: pointer; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; list-style: none; }
