@@ -242,6 +242,15 @@
     });
   }
 
+  // 접수 폼 단계 표시: 화면에 보이는 단계를 칠하고, 칠한 칩이 보이게 가로로 굴린다
+  const stepNav = $('.step-nav');
+  if (stepNav && 'IntersectionObserver' in window) {
+    const links = $$('a', stepNav);
+    const mark = id => links.forEach(a => { const on = a.getAttribute('href') === '#' + id; a.classList.toggle('on', on); if (on) a.scrollIntoView({ block: 'nearest', inline: 'nearest' }); });
+    const io = new IntersectionObserver(es => { es.filter(e => e.isIntersecting).forEach(e => mark(e.target.id)); }, { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach(a => { const t = document.querySelector(a.getAttribute('href')); if (t) io.observe(t); });
+  }
+
   // 파일 선택 시 바로 올리기
   $$('form[data-autosubmit] input[type=file]').forEach(i => i.addEventListener('change', () => { if (i.files.length) i.form.submit(); }));
 })();

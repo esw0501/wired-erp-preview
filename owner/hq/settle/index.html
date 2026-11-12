@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
 </head>
-<body data-idle="0" data-csrf="15d5a7505df16021e5b3cc2259774203">
+<body data-idle="0" data-csrf="905177a7ffe4995dd47b9d08cf7cd140">
 <header class="topbar">
   <div class="topbar-in">
     <a class="brand" href="/wired-erp-preview/owner/"><img class="brand-logo" src="/wired-erp-preview/assets/logo.png" alt="킹넷" width="71" height="37"></a>
@@ -18,7 +18,7 @@
     <div class="top-right">
             <a class="bell" href="/wired-erp-preview/owner/notifications/" aria-label="알림">알림<b data-unread>10</b></a>
             <span class="who">김대표 <small>한빛통신(데모) · 상부 · 상부 대표</small></span>
-      <form method="post" action="/wired-erp-preview/owner/logout/" class="top-logout"><input type="hidden" name="_csrf" value="15d5a7505df16021e5b3cc2259774203"><button class="btn sm">로그아웃</button></form>
+      <form method="post" action="/wired-erp-preview/owner/logout/" class="top-logout"><input type="hidden" name="_csrf" value="905177a7ffe4995dd47b9d08cf7cd140"><button class="btn sm">로그아웃</button></form>
       <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
     </div>
   </div>
@@ -29,7 +29,7 @@
     <a href="/wired-erp-preview/owner/hq/" class="">홈</a><a href="/wired-erp-preview/owner/hq/apps/" class="">접수 목록</a><a href="/wired-erp-preview/owner/hq/happycall/" class="">해피콜</a><a href="/wired-erp-preview/owner/hq/codeshop/" class="">코드점 전달·개통</a><a href="/wired-erp-preview/owner/hq/settle/" class="on">정산 관리</a><a href="/wired-erp-preview/owner/hq/policy/" class="">정책 관리</a><a href="/wired-erp-preview/owner/hq/branches/" class="">하부점·계정</a><a href="/wired-erp-preview/owner/center/" class="">고객센터</a><a href="/wired-erp-preview/owner/hq/lists/" class="">목록·화면 설정</a><a href="/wired-erp-preview/owner/hq/settings/" class="">설정·로그</a>  </nav>
   <div class="side-foot">
     <a href="/wired-erp-preview/owner/password/">비밀번호 변경</a>
-    <a href="/wired-erp-preview/owner/downloads/">다운로드 요청</a>    <form method="post" action="/wired-erp-preview/owner/logout/" class="side-logout"><input type="hidden" name="_csrf" value="15d5a7505df16021e5b3cc2259774203"><button class="linklike">로그아웃</button></form>
+    <a href="/wired-erp-preview/owner/downloads/">다운로드 요청</a>    <form method="post" action="/wired-erp-preview/owner/logout/" class="side-logout"><input type="hidden" name="_csrf" value="905177a7ffe4995dd47b9d08cf7cd140"><button class="linklike">로그아웃</button></form>
   </div>
 </aside>
 <main class="page">
@@ -42,7 +42,7 @@
 <div class="grid split">
   <section class="card">
     <div class="card-head"><h2>정산서 제작</h2><span class="muted small">만들면 초안. 금액을 확인하고 배포해야 하부점이 봅니다.</span></div>
-    <form method="post" action="/wired-erp-preview/owner/hq/settle/build/" class="stack"><input type="hidden" name="_csrf" value="15d5a7505df16021e5b3cc2259774203">      <div class="fgrid">
+    <form method="post" action="/wired-erp-preview/owner/hq/settle/build/" class="stack"><input type="hidden" name="_csrf" value="905177a7ffe4995dd47b9d08cf7cd140">      <div class="fgrid">
         <label>받을 하부점<select name="branch_id"><option value="all">전체(운영 중)</option><option value="1">강남점</option><option value="2">분당점</option><option value="3">수원점</option></select></label>
         <label>대상 기준<select name="basis"><option value="installed">개통일 기준 · 개통완료 건</option><option value="received">접수완료일 기준 · 개통완료 건</option></select></label>
         <label>시작일<input type="date" name="start" value="2026-10-01" required></label>
@@ -62,15 +62,15 @@
 </div>
 
 <section class="card">
-  <div class="card-head"><h2>정산서 <span class="muted small">2026.10.01 ~ 2026.10.31 기간이 걸치는 것</span></h2>
+    <div class="card-head"><h2>정산서 <span class="muted small">2026.10.01 ~ 2026.10.31 기간이 걸치는 것</span></h2>
     <form class="filters" method="get"><input type="hidden" name="tab" value="out"><label>기간<input type="date" name="from" value="2026-10-01"></label><label>~<input type="date" name="to" value="2026-10-31"></label><button class="btn">보기</button></form></div>
     <div class="table-wrap"><table class="t">
     <thead><tr><th>하부점</th><th>정산서</th><th>상태</th><th class="num">건</th><th class="num">수수료</th><th class="num">회사 수익</th><th class="num">차감</th><th class="num">지급액</th><th class="num">송금</th><th>입금 예정</th><th>요청</th><th></th></tr></thead>
     <tbody>      <tr class=""><td>강남점</td>
         <td><a href="/wired-erp-preview/owner/hq/settle/1/">2026-10 월정산</a><span class="sub">2026.10.01~2026.10.31 · 개통일</span></td>
         <td><span class="tag ok">배포</span></td>
-        <td class="num">4</td><td class="num">1,410,000원</td>
-        <td class="num">560,000원</td>        <td class="num neg">-1,060,000원</td><td class="num"><b>350,000원</b></td>
+        <td class="num">4</td><td class="num">1,320,000원</td>
+        <td class="num">650,000원</td>        <td class="num neg">-1,060,000원</td><td class="num"><b>260,000원</b></td>
         <td class="num"><span class="tag ok">완료</span></td>
         <td class="nowrap">-</td>
         <td></td>
@@ -87,21 +87,20 @@
           <tr class=""><td>수원점</td>
         <td><a href="/wired-erp-preview/owner/hq/settle/3/">2026-10 월정산</a><span class="sub">2026.10.01~2026.10.31 · 개통일</span></td>
         <td><span class="tag ok">배포</span></td>
-        <td class="num">3</td><td class="num">1,220,000원</td>
-        <td class="num">490,000원</td>        <td class="num neg">0원</td><td class="num"><b>1,220,000원</b></td>
+        <td class="num">3</td><td class="num">1,160,000원</td>
+        <td class="num">550,000원</td>        <td class="num neg">0원</td><td class="num"><b>1,160,000원</b></td>
         <td class="num">0원</td>
         <td class="nowrap">-</td>
         <td></td>
         <td class="nowrap"><a class="btn sm" href="/wired-erp-preview/owner/hq/settle/3/">보기</a></td></tr>
     </tbody>
-    <tfoot><tr><td colspan="7">지급액 합계</td><td class="num">2,320,000원</td><td colspan="4"></td></tr></tfoot>
+    <tfoot><tr><td colspan="7">지급액 합계</td><td class="num">2,170,000원</td><td colspan="4"></td></tr></tfoot>
   </table></div>
   </section>
 
 <section class="card">
   <div class="card-head"><h2>차감 대기 환수</h2><span class="muted small">발생일 이후 만드는 정산서에서 차감됩니다. 환수 등록은 접수 상세에서. (기간 12개월)</span></div>
-    <div class="table-wrap"><table class="t compact"><thead><tr><th>접수번호</th><th>하부점</th><th>사유</th><th>발생일</th><th>메모</th></tr></thead><tbody>
-    <tr><td><a href="/wired-erp-preview/owner/apps/43/">2611-00043</a></td><td>강남점</td><td>약정 중 해지</td><td>2026.10.28</td><td>고객 약정 중 해지(데모)</td></tr>  </tbody></table></div></section>
+  <p class="empty">대기 중인 환수가 없습니다.</p></section>
 
 </main>
 <nav class="tabbar" aria-label="하단 메뉴">

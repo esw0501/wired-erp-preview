@@ -846,6 +846,17 @@ a.kpi, .kpi > a:hover { border-color: var(--ink3); }
   .ai-grid .ai-name { min-width: 150px; }
 }
 
+/* 빨간 합계 카드 위 숫자는 흰색(빨강 위 빨강 방지) */
+.kpi > .total.bad b, .kpi > .total.bad .k, .kpi > .total.bad .s { color: #fff; }
+
+/* 접수 폼 단계 표시: 위에 붙어 따라오고, 지금 보는 단계를 칠한다 */
+.step-nav { position: sticky; top: var(--top-h, 56px); z-index: 5; display: flex; gap: 6px; overflow-x: auto; padding: 8px 0; background: var(--bg); scrollbar-width: none; }
+.step-nav::-webkit-scrollbar { display: none; }
+.step-nav a { flex: none; height: 32px; line-height: 30px; padding: 0 12px; border: 1px solid var(--line2); border-radius: 16px; font-size: 13px; color: var(--ink2); background: var(--panel); text-decoration: none; white-space: nowrap; }
+.step-nav a.on { border-color: var(--primary); background: var(--primary); color: #fff; font-weight: 700; }
+.intake .fieldset { scroll-margin-top: calc(var(--top-h, 56px) + 56px); }
+@media (max-width: 760px) { .step-nav { margin: 0 calc(var(--pad) * -1); padding-left: var(--pad); padding-right: var(--pad); } }
+
 /* 고객센터 (v2 6단계) */
 .notice-body { white-space: pre-wrap; line-height: 1.7; font-size: 15px; }
 .answer { padding: 12px 14px; border-left: 3px solid var(--green); background: var(--green-soft); border-radius: var(--r); }
@@ -875,3 +886,6 @@ details.anom ul.noti { margin-top: 8px; }
 .formula > i { align-self: center; font-style: normal; font-family: var(--mono); font-size: 18px; color: var(--ink3); }
 @media (max-width: 760px) { .formula > div { flex-basis: calc(50% - 20px); } .formula > div b { font-size: 17px; } }
 @media (max-width: 760px) { .formula { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; } .formula > i { display: none; } .formula > div.hot { grid-column: 1 / -1; } }
+
+/* 홈 할 일이 8줄을 넘으면 줄 간격을 줄여 한 화면 유지 */
+.todo.compact.dense li { padding: 5px 0; }
