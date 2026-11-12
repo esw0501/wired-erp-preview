@@ -9,16 +9,16 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
 </head>
-<body data-idle="0" data-csrf="807a5b3a76fd628fa1dfab0624a7caf5">
+<body data-idle="0" data-csrf="d5cb45c04121113bc0a9f24608ed101f">
 <header class="topbar">
   <div class="topbar-in">
     <a class="brand" href="/wired-erp-preview/branch/"><img class="brand-logo" src="/wired-erp-preview/assets/logo.png" alt="킹넷" width="71" height="37"></a>
     <nav class="topnav" aria-label="주 메뉴">
       <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="">접수 목록</a><a href="/wired-erp-preview/branch/br/apply/" class="">＋ 접수 등록</a><a href="/wired-erp-preview/branch/br/gifts/" class="">사은품 지급</a><a href="/wired-erp-preview/branch/br/settle/" class="on">정산서</a><a href="/wired-erp-preview/branch/center/" class="">고객센터 <b class="nav-badge">1</b></a><a href="/wired-erp-preview/branch/br/users/" class="">직원 계정</a>    </nav>
     <div class="top-right">
-            <a class="bell" href="/wired-erp-preview/branch/notifications/" aria-label="알림">알림<b data-unread>15</b></a>
+            <a class="bell" href="/wired-erp-preview/branch/notifications/" aria-label="알림">알림<b data-unread>17</b></a>
             <span class="who">정점장 <small>한빛통신(데모) · 강남점 · 하부점 대표</small></span>
-      <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="807a5b3a76fd628fa1dfab0624a7caf5"><button class="btn sm">로그아웃</button></form>
+      <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="d5cb45c04121113bc0a9f24608ed101f"><button class="btn sm">로그아웃</button></form>
       <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
     </div>
   </div>
@@ -29,7 +29,7 @@
     <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="">접수 목록</a><a href="/wired-erp-preview/branch/br/apply/" class="">＋ 접수 등록</a><a href="/wired-erp-preview/branch/br/gifts/" class="">사은품 지급</a><a href="/wired-erp-preview/branch/br/settle/" class="on">정산서</a><a href="/wired-erp-preview/branch/center/" class="">고객센터</a><a href="/wired-erp-preview/branch/br/users/" class="">직원 계정</a>  </nav>
   <div class="side-foot">
     <a href="/wired-erp-preview/branch/password/">비밀번호 변경</a>
-        <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="807a5b3a76fd628fa1dfab0624a7caf5"><button class="linklike">로그아웃</button></form>
+        <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="d5cb45c04121113bc0a9f24608ed101f"><button class="linklike">로그아웃</button></form>
   </div>
 </aside>
 <main class="page">
@@ -41,12 +41,23 @@
   <div class="card-head"><h2>배포된 정산서</h2><span class="muted small">상부가 배포한 최신본. 항목·전체 수정요청을 보낼 수 있습니다. 배포와 실제 입금은 별개입니다.</span></div>
     <div class="table-wrap"><table class="t">
     <thead><tr><th>정산서</th><th>대상</th><th class="num">건</th><th class="num">수수료</th><th class="num">차감</th><th class="num">지급액</th><th class="num">입금됨</th><th class="num">남은 금액</th><th>입금 예정</th><th>요청</th></tr></thead>
-    <tbody>      <tr><td><a href="/wired-erp-preview/branch/br/settle/1/">2026-10 월정산</a></td><td class="nowrap small">2026.10.01~2026.10.31</td><td class="num">4</td><td class="num">1,410,000원</td>
+    <tbody>      <tr><td><a href="/wired-erp-preview/branch/br/settle/5/">주정산 2026.11.01~2026.11.07</a> <span class="tag">v2</span></td><td class="nowrap small">2026.11.01~2026.11.07</td><td class="num">2</td><td class="num">750,000원</td>
+        <td class="num neg">-355,000원</td><td class="num"><b>395,000원</b></td><td class="num">0원</td>
+        <td class="num neg">395,000원</td><td>2026.11.13</td>
+        <td><span class="tag warn">답변 대기 1</span></td></tr>
+          <tr><td><a href="/wired-erp-preview/branch/br/settle/1/">2026-10 월정산</a></td><td class="nowrap small">2026.10.01~2026.10.31</td><td class="num">4</td><td class="num">1,410,000원</td>
         <td class="num neg">-1,060,000원</td><td class="num"><b>350,000원</b></td><td class="num">350,000원</td>
         <td class="num "><span class="tag ok">완료</span></td><td>-</td>
         <td></td></tr>
     </tbody></table></div>
   </div>
+<div class="card">
+  <div class="card-head"><h2>이전본 · 배포 취소</h2><span class="muted small">수정본이 배포됐거나 배포가 취소된 정산서. 참고용</span></div>
+  <div class="table-wrap"><table class="t compact">
+    <thead><tr><th>정산서</th><th>대상</th><th class="num">지급액</th><th>사유</th></tr></thead>
+    <tbody><tr class="muted"><td><a href="/wired-erp-preview/branch/br/settle/4/">주정산 2026.11.01~2026.11.07</a> <span class="tag">v1</span></td><td class="nowrap small">2026.11.01~2026.11.07</td><td class="num">65,000원</td><td class="small">수정본 v2 배포 · 11.12 15:53</td></tr></tbody>
+  </table></div>
+</div>
 </main>
 <nav class="tabbar" aria-label="하단 메뉴">
   <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="">내 접수</a><a href="/wired-erp-preview/branch/br/apply/" class=" cta">접수하기</a><a href="/wired-erp-preview/branch/br/settle/" class="on">정산서</a>  <button type="button" data-toggle-side>전체 메뉴</button>
