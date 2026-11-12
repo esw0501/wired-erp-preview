@@ -846,6 +846,16 @@ a.kpi, .kpi > a:hover { border-color: var(--ink3); }
   .ai-grid .ai-name { min-width: 150px; }
 }
 
+/* AI 검증 (v2 5단계) */
+details.anom { border: 1px solid var(--line); border-radius: var(--r2); padding: 10px 12px; margin-bottom: 8px; background: var(--panel); }
+details.anom summary { cursor: pointer; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; list-style: none; }
+details.anom summary::-webkit-details-marker { display: none; }
+details.anom .ai-sent { flex-basis: 100%; font-size: 13px; color: var(--ink2); padding-left: 2px; }
+details.anom ul.noti { margin-top: 8px; }
+.recon-ai tr.ai-low td { background: var(--yellow-soft); }
+.recon-ai .ai-no { width: 130px; font-family: var(--mono); }
+.recon-ai .ai-amt { width: 110px; text-align: right; font-family: var(--mono); }
+
 /* 정산 계산식 띠 (v2 4단계): 받을 단가 − 회사 수익 = 수수료 − 사은품 − 환수 = 지급액 */
 .formula { display: flex; align-items: stretch; gap: 8px; flex-wrap: wrap; margin-bottom: var(--gap); }
 .formula > div { flex: 1 1 130px; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r2); background: var(--panel); display: flex; flex-direction: column; gap: 4px; }
