@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="/wired-erp-preview/assets/app.css">
 </head>
-<body data-idle="0" data-csrf="bf8846b2789d9e71750c4bde5959f111">
+<body data-idle="0" data-csrf="6fd846c787b1b5b86faa786f742962b3">
 <header class="topbar">
   <div class="topbar-in">
     <a class="brand" href="/wired-erp-preview/branch/"><img class="brand-logo" src="/wired-erp-preview/assets/logo.png" alt="킹넷" width="71" height="37"></a>
@@ -18,7 +18,7 @@
     <div class="top-right">
             <a class="bell" href="/wired-erp-preview/branch/notifications/" aria-label="알림">알림<b data-unread>13</b></a>
             <span class="who">정점장 <small>한빛통신(데모) · 강남점 · 하부점 대표</small></span>
-      <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="bf8846b2789d9e71750c4bde5959f111"><button class="btn sm">로그아웃</button></form>
+      <form method="post" action="/wired-erp-preview/branch/logout/" class="top-logout"><input type="hidden" name="_csrf" value="6fd846c787b1b5b86faa786f742962b3"><button class="btn sm">로그아웃</button></form>
       <button class="menu-btn" type="button" data-toggle-side aria-label="메뉴">☰</button>
     </div>
   </div>
@@ -29,7 +29,7 @@
     <a href="/wired-erp-preview/branch/br/" class="">홈</a><a href="/wired-erp-preview/branch/br/apps/" class="">접수 목록</a><a href="/wired-erp-preview/branch/br/apply/" class="">＋ 접수 등록</a><a href="/wired-erp-preview/branch/br/settle/" class="on">정산서</a><a href="/wired-erp-preview/branch/br/users/" class="">직원 계정</a>  </nav>
   <div class="side-foot">
     <a href="/wired-erp-preview/branch/password/">비밀번호 변경</a>
-        <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="bf8846b2789d9e71750c4bde5959f111"><button class="linklike">로그아웃</button></form>
+        <form method="post" action="/wired-erp-preview/branch/logout/" class="side-logout"><input type="hidden" name="_csrf" value="6fd846c787b1b5b86faa786f742962b3"><button class="linklike">로그아웃</button></form>
   </div>
 </aside>
 <main class="page">
@@ -38,11 +38,13 @@
     <span class="page-org">한빛통신(데모) · 강남점</span>
   </div>
     <div class="card">
-  <div class="card-head"><h2>확정된 정산서</h2><span class="muted small">상부 대표가 확정한 정산서만 보입니다. 항목별로 이의를 제기할 수 있습니다.</span></div>
+  <div class="card-head"><h2>배포된 정산서</h2><span class="muted small">상부가 배포한 최신본. 항목·전체 수정요청을 보낼 수 있습니다. 배포와 실제 입금은 별개입니다.</span></div>
     <div class="table-wrap"><table class="t">
-    <thead><tr><th>정산월(개통월)</th><th class="num">개통</th><th class="num">수수료</th><th class="num">사은품 대납</th><th class="num">환수</th><th class="num">지급액</th><th class="num">입금됨</th><th class="num">남은 금액</th><th>확정일</th></tr></thead>
-    <tbody>      <tr><td><a href="/wired-erp-preview/branch/br/settle/1/">2026-10</a></td><td class="num">4건</td><td class="num">1,410,000원</td>
-        <td class="num neg">-1,060,000원</td><td class="num neg">0원</td><td class="num"><b>350,000원</b></td><td class="num">350,000원</td><td class="num "><span class="badge b-green">완료</span></td><td>2026.11.12</td></tr>
+    <thead><tr><th>정산서</th><th>대상</th><th class="num">건</th><th class="num">수수료</th><th class="num">차감</th><th class="num">지급액</th><th class="num">입금됨</th><th class="num">남은 금액</th><th>입금 예정</th><th>요청</th></tr></thead>
+    <tbody>      <tr><td><a href="/wired-erp-preview/branch/br/settle/1/">2026-10 월정산</a></td><td class="nowrap small">2026.10.01~2026.10.31</td><td class="num">4</td><td class="num">1,410,000원</td>
+        <td class="num neg">-1,060,000원</td><td class="num"><b>350,000원</b></td><td class="num">350,000원</td>
+        <td class="num "><span class="tag ok">완료</span></td><td>-</td>
+        <td></td></tr>
     </tbody></table></div>
   </div>
 </main>

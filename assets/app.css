@@ -845,3 +845,15 @@ a.kpi, .kpi > a:hover { border-color: var(--ink3); }
   .t.keep tr.ai-low td { background: var(--yellow-soft); }
   .ai-grid .ai-name { min-width: 150px; }
 }
+
+/* 정산 계산식 띠 (v2 4단계): 받을 단가 − 회사 수익 = 수수료 − 사은품 − 환수 = 지급액 */
+.formula { display: flex; align-items: stretch; gap: 8px; flex-wrap: wrap; margin-bottom: var(--gap); }
+.formula > div { flex: 1 1 130px; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r2); background: var(--panel); display: flex; flex-direction: column; gap: 4px; }
+.formula > div .k { font-size: 12px; color: var(--ink3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.formula > div b { font-family: var(--mono); font-size: 20px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.formula > div.hot { border-color: var(--green); background: var(--green-soft); }
+.formula > div.hot b { color: var(--green); }
+.formula > div.side { border-style: dashed; }
+.formula > i { align-self: center; font-style: normal; font-family: var(--mono); font-size: 18px; color: var(--ink3); }
+@media (max-width: 760px) { .formula > div { flex-basis: calc(50% - 20px); } .formula > div b { font-size: 17px; } }
+@media (max-width: 760px) { .formula { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; } .formula > i { display: none; } .formula > div.hot { grid-column: 1 / -1; } }
